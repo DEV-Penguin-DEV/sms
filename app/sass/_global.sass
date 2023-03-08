@@ -1,0 +1,112 @@
+*
+  box-sizing: border-box
+  font-family: 'Poppins'
+
+html
+  min-height: 100vh
+
+main
+  z-index: 10
+  position: relative
+
+section
+  width: 100%
+
+.container
+  width: 100%
+  margin: auto
+  max-width: 1606px
+  padding: 0px 30px
+
+.container-2
+  width: 100%
+  margin: auto
+  max-width: 1505px
+  padding: 0px 30px
+
+.home
+  &.partner-page
+    background-image: url('../img/3planet.jpg')
+    background-repeat: no-repeat
+  &.partner--pw
+    min-height: 100vh
+    position: relative
+    background-image: url('../img/partners-worker.jpg')
+    background-size: cover
+    &::before
+      @include defaul-pseudo-element(100%)
+      display: block
+      top: 0
+      right: 0
+      background-color: rgba(0, 0, 0, 0.5)
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: top right
+    & .partner-cabinet__wrapper
+      background: none
+      -webkit-backdrop-filter: none
+      backdrop-filter: none
+      border-radius: 0
+
+.button-controler
+  @include button-none
+  display: block
+  position: relative
+  border-radius: 5px
+  cursor: pointer
+  animation: shadow-animation-unhover $general-transition-duraction 1 forwards
+  &--icon
+    width: 35px
+    height: 35px
+    &::before
+      @include defaul-pseudo-element(23px)
+      @include centering-absolute-element()
+      background: no-repeat center center
+      background-size: cover
+  &--text
+    width: fit-content
+    padding: 7px 15px
+    box-sizing: border-box
+    font-family: 'Kharkiv Tone'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 20px
+    text-align: center
+    color: #FFFFFF
+    text-shadow: 0px 1px 2px rgba(196, 7, 75, 0.7)
+  &:hover
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.6)
+    animation: shadow-animation-hover $general-transition-duraction 1 forwards
+
+@keyframes shadow-animation-hover
+  from
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0)
+  to
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.6)
+
+@keyframes shadow-animation-unhover
+  from
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.6)
+  to
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0)
+
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+.needAnim
+  opacity: 0
+  transform: translateY(20px)
+  transition: .4s linear
+  @include tablet
+    transform: translateY(0)
+  &.animated
+    opacity: 1
+    transform: translateY(0)

@@ -1,0 +1,288 @@
+.header-partner
+	position: sticky
+	left: 0
+	top: 0
+	z-index: 999
+	padding: 20px 40px 30px
+	display: flex
+	flex-flow: wrap
+	align-items: center
+	justify-content: space-between
+	width: 100%
+	mix-blend-mode: normal
+	transition: .5s
+	background: none
+	@include laptop
+		padding-left: 30px
+	@include tablet
+		padding: 15px 30px
+	&.hide
+		transform: translateY(-100%)
+		@include tablet
+			transform: translateY(0px)
+	&__logo
+		font-weight: 900
+		font-family: "Neue Machina"
+		font-size: 20px
+		color: $white
+	&--pw
+		width: 95%
+		margin: 0 auto
+		padding-right: 0
+		padding-left: 0
+	.header__logo
+		&--pw
+			font-family: 'Neue Machina'
+			font-style: normal
+			font-weight: 900
+			font-size: 20px
+			line-height: 30px
+
+			text-align: center
+			text-transform: uppercase
+
+			color: #FFFFFF
+	.header__hamb-cabinet
+		display: none
+		cursor: pointer
+		position: relative
+		top: -5px
+		@include tablet
+			display: inline-block
+			.close
+				display: none
+		&.open
+			.close
+				display: block
+			.open
+				display: none
+	.header__menu
+		display: flex
+		flex-flow: wrap
+		@include tablet
+			display: none
+		li
+			&:not(:last-child)
+				margin-right: 50px
+				@include laptop
+					margin-right: 20px
+			&.active
+				a
+					color: $blue
+		a
+			@include p0
+			transition: .5s
+			color: $white
+			font-family: $font_tone
+			position: relative
+			@include laptop
+				font-size: 18px
+			&:after
+				content: ""
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -4px
+				margin: auto
+				width: 0px
+				height: 1px
+				background: $blue
+				transition: .5s
+			&:hover
+				color: $blue
+				&:after
+					width: 100%
+	.header__right
+		align-items: center
+		display: flex
+		flex-flow: wrap
+		gap: 40px
+	.header__balance
+		display: flex
+		flex-flow: wrap
+		align-items: center
+		margin-left: 0
+		@include tablet
+			display: none
+		svg
+			circle, path
+				fill: $white
+				transition: .5s
+		span
+			margin-left: 20px
+			@include p0
+			transition: .5s
+			color: $white
+			position: relative
+			font-size: 16px
+			@include laptop
+				font-size: 16px
+	.header__account
+		display: flex
+		flex-flow: wrap
+		align-items: center
+		margin-left: 0
+		@include tablet
+			display: none
+		svg
+			circle, path
+				fill: $white
+				transition: .5s
+		span
+			margin-left: 20px
+			@include p0
+			transition: .5s
+			color: $white
+			position: relative
+			font-size: 16px
+			@include laptop
+				font-size: 16px
+			&:after
+				content: ""
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -4px
+				margin: auto
+				width: 0px
+				height: 1px
+				background: $blue
+				transition: .5s
+		&:hover
+			svg
+				circle, path
+					fill: $blue
+			span
+				color: $blue
+				&:after
+					width: 100%
+		&--pw
+			svg
+				circle, path
+					fill: $blue
+	.header__balance-count
+		font-weight: 500 !important
+		color: $blue !important
+	.header__lang
+		display: flex
+		flex-flow: wrap
+		position: relative
+		@include tablet
+			display: none
+		&--current
+			align-items: center
+			display: flex
+			flex-flow: wrap
+			cursor: pointer
+			span
+				@include p0
+				transition: .5s
+				color: $white
+				margin-right: 5px
+				font-size: 16px
+				@include laptop
+					font-size: 16px
+		&--list
+			display: flex
+			flex-flow: column nowrap
+			position: absolute
+			left: 0
+			top: 30px
+			opacity: 0
+			visibility: hidden
+			transition: .2s
+			a
+				@include p5
+				color: $white
+				&:hover
+					color: #00E0FF
+		&.open
+			>div
+				opacity: 1
+				visibility: visible
+			svg
+				transform: rotate(180deg)
+
+.menu
+	display: block
+	width: 100%
+	height: 100%
+	position: fixed
+	left: 0
+	top: 0
+	z-index: 998
+	padding: 84px 20px 30px 30px
+	opacity: 0
+	visibility: hidden
+	transition: .5s
+	&.open
+		opacity: 1
+		visibility: visible
+	.rgba
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		background: $black
+		z-index: 2
+	&__content
+		position: relative
+		z-index: 3
+		height: 100%
+
+	&__account
+		padding: 30px 0
+		border-top: 1px solid rgba(255,255,255,.1)
+		border-bottom: 1px solid rgba(255,255,255,.1)
+		a
+			display: flex
+			align-items: center
+			color: $white
+			@include p1
+			font-family: 'Poppins'
+			svg
+				margin-right: 10px
+	&__list
+		margin-top: 50px
+		li
+			&:not(:last-child)
+				margin-bottom: 40px
+		a
+			color: $white
+			&:hover, &.active
+				color: $blue
+			@include p1
+	&__bottom
+		padding: 37px 0 0 0
+		position: absolute
+		left: 0
+		bottom: 0
+		margin: auto
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border-top: 1px solid rgba(255,255,255,.1)
+		a
+			@include p1
+			color: $white
+
+	&__lang
+		position: relative
+		>span
+			@include p1
+			color: $white
+		&--list
+			position: absolute
+			left: 0
+			bottom: 30px
+			opacity: 0
+			visibility: hidden
+			transition: .2s
+		&.open
+			>div
+				opacity: 1
+				visibility: visible
+			svg
+				transform: rotate(180deg)

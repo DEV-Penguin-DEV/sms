@@ -1,0 +1,127 @@
+.partners-worker-cabinet__nav-wrapper
+    display: flex
+    flex-direction: column
+    gap: 20px
+    margin-bottom: 20px
+
+.partners-worker-cabinet__part
+    width: 100%
+    .partners-worker-cabinet__left-controler
+        display: flex
+        gap: 20px
+
+.partners-worker-cabinet__top-part
+    display: flex
+    justify-content: space-between
+
+.partners-worker-cabinet__button-controler
+    &--power
+        box-shadow: 0px 10px 20px rgba(254, 24, 107, 0.25)
+        background: linear-gradient(180deg, #FF5290 0%, #FE186B 100%)
+        &::before
+            background-image: url(../img/power.svg)
+    &--reload
+        background: linear-gradient(180deg, #FFE27B 0%, #FFD748 100%)
+        box-shadow: 0px 10px 20px rgba(255, 215, 72, 0.25)
+        &::before
+            background-image: url(../img/reload.svg)
+    &--edit
+        background: linear-gradient(180deg, #84F0FF 0%, #00E0FF 100%)
+        box-shadow: 0px 5px 10px rgba(0, 224, 255, 0.25)
+        &::before
+            background-image: url(../img/edit.svg)
+    &--delete
+        background: linear-gradient(180deg, #FF5290 0%, #FE186B 100%)
+        box-shadow: 0px 10px 20px rgba(254, 24, 107, 0.25)
+
+    &--reset
+        background: linear-gradient(180deg, #FF5290 0%, #FE186B 100%)
+        box-shadow: 0px 10px 20px rgba(254, 24, 107, 0.25)
+
+    &--download
+        background: linear-gradient(180deg, #84F0FF 0%, #00E0FF 100%)
+        box-shadow: 0px 5px 10px rgba(0, 224, 255, 0.25)
+        color: #090909
+
+.partners-worker-cabinet__button-controler
+    display: flex
+    gap: 10px
+
+.partners-worker-cabinet__text
+    display: flex
+    flex-direction: column
+    span
+        display: block
+        width: fit-content
+        font-family: 'Kharkiv Tone'
+        font-style: normal
+        font-weight: 400
+        font-size: 13px
+        line-height: 20px
+        text-transform: uppercase
+        color: #FFFFFF
+    .partners-worker-cabinet__inn
+        color: #8AE245
+
+.partners-worker-cabinet__statistic-list
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    gap: 10px
+
+.partners-worker-cabinet__statistic-item
+    padding: 15px 15px 10px 25px
+    background: rgba(255, 255, 255, 0.1)
+    backdrop-filter: blur(25px)
+    border-radius: 10px
+    display: flex
+    gap: 20px
+    align-items: center
+    height: 85px
+    @include laptop1480
+        padding: 15px 15px 10px 15px
+    @include laptop1270
+        padding: 10px
+        height: 75px
+        gap: 10px
+
+    &:first-of-type
+        background: rgba(0, 224, 255, 0.2)
+        border-radius: 10px
+        border: 1px solid #00E0FF
+    .partners-worker-cabinet__statistic-text-content
+        & p
+            font-family: 'Kharkiv Tone'
+            font-style: normal
+            font-weight: 400
+            font-size: 13px
+            line-height: 25px
+            text-transform: uppercase
+            color: #FFFFFF
+            @include laptop1580
+                font-size: 10px
+                line-height: 20px
+            @include laptop1480
+                font-size: 8px
+                line-height: 20px
+
+        & .partners-worker-cabinet__statistic-title
+            font-family: 'Poppins'
+            font-style: normal
+            font-weight: 600
+            font-size: 30px
+            line-height: 35px
+            @include laptop1580
+                font-size: 25px
+                line-height: 30px
+            @include laptop1480
+                font-size: 20px
+                line-height: 25px
+
+.partners-worker-cabinet__money-symbol
+    font-size: 20px
+    @include laptop1270
+        font-size: 15px
+
+.partners-worker-cabinet__bottom-part
+    padding-bottom: 20px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)

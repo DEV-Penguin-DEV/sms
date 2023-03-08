@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.eot');
+    src: url('Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Poppins-Regular.woff2') format('woff2'),
+        url('Poppins-Regular.woff') format('woff'),
+        url('Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kharkiv';
+    src: url('KharkivTone-Regular.eot');
+    src: url('KharkivTone-Regular.eot?#iefix') format('embedded-opentype'),
+        url('KharkivTone-Regular.woff2') format('woff2'),
+        url('KharkivTone-Regular.woff') format('woff'),
+        url('KharkivTone-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('NeueMachina-Medium.eot');
+    src: url('NeueMachina-Medium.eot?#iefix') format('embedded-opentype'),
+        url('NeueMachina-Medium.woff2') format('woff2'),
+        url('NeueMachina-Medium.woff') format('woff'),
+        url('NeueMachina-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('NeueMachina-Black.eot');
+    src: url('NeueMachina-Black.eot?#iefix') format('embedded-opentype'),
+        url('NeueMachina-Black.woff2') format('woff2'),
+        url('NeueMachina-Black.woff') format('woff'),
+        url('NeueMachina-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

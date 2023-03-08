@@ -1,0 +1,318 @@
+.partner-cabinet
+    &__wrapper
+        width: 95%
+        margin: 0 auto
+        background: rgba(0, 0, 0, 0.4)
+        backdrop-filter: blur(25px)
+        height: 100%
+        border-radius: 10px
+        display: flex
+        flex-flow: column nowrap
+        padding-bottom: 30px
+        overflow: hidden
+        @media (max-width: 450px) and (min-height: 890px)
+            height: 90vh
+        @media (min-height: 890px)
+            height: 90vh
+
+    &__nav-wrapper
+        display: flex
+        padding: 20px 40px
+        flex-flow: row nowrap
+        align-items: flex-start
+        @include tabletL
+            flex-flow: column nowrap
+        @include mobileL
+            padding: 20px
+        
+    &__left-nav
+        display: flex
+        flex-flow: column nowrap
+        justify-content: space-between
+        max-width: 440px
+        width: 100%
+        margin: 0 50px 0 0
+        padding: 20px
+        background: rgba(0, 224, 255, 0.2)
+        border-radius: 10px
+        @include tabletL
+            max-width: 100%
+            margin: 0 0 25px 0
+    
+    &__right-nav
+        width: 100%
+    
+    &__info-wrapper
+        display: flex
+        flex-flow: row nowrap
+        align-items: center
+        justify-content: space-between
+        margin: 0 0 23px 0
+        @include mobile
+            margin: 0 0 15px 0
+    
+    &__id-info
+        color: #8AE245
+        display: flex
+        align-items: center
+        flex-flow: row nowrap
+        font-size: 13px
+
+        span
+            font-family: "Kharkiv Tone"
+
+        .id-number 
+            margin-left: 20px
+            color: $white
+            text-transform: uppercase
+            font-family: "Kharkiv Tone"
+            @include mobileL
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                width: 150px
+    
+    &__settings-button
+        display: flex
+        padding: 0
+        width: 25px
+        height: 25px
+        border: none
+        background-color: transparent
+        cursor: pointer
+
+    &__balance-wrapper
+        display: flex
+        justify-content: space-between
+        flex-flow: row nowrap
+        align-items: flex-end
+        font-size: 18px
+        @include mobile
+            flex-direction: column
+            align-items: stretch
+
+    &__balance-info
+        display: flex
+        flex-flow: column nowrap
+        @include mobile
+            flex-direction: row
+            width: 100%
+            justify-content: space-between
+            margin: 0 0 15px 0
+    
+    &__balance-inner
+        display: flex
+        flex-flow: row nowrap
+        align-items: center
+        &:first-child
+            margin: 0 0 8px 0
+        @include mobile
+            &:first-child
+                margin: 0
+
+    &__balance-title
+        font-weight: 400
+        color: $white
+        margin-right: 20px
+
+    &__balance-number
+        color: #00E0FF
+        font-weight: 500
+
+    &__refil-button
+        background: #00E0FF
+        border-radius: 10px
+        cursor: pointer
+        border: none
+        outline: none
+        padding: 10px 15px
+        color: #090909
+        font-size: 16px
+
+    &__table-wrapper
+        padding: 40px
+        border-top: 1px solid rgba(255, 255, 255, 0.1)
+        overflow-x: hidden
+        overflow-y: auto
+        &::-webkit-scrollbar
+            width: 5px
+            border-radius: 10px
+        &::-webkit-scrollbar-track
+            background: rgba(255, 255, 255, 0.1)
+        &::-webkit-scrollbar-thumb
+            border-radius: 10px
+            border: 3px solid $blue
+        @include tabletL
+            padding: 30px
+        @include tablet
+            height: 600px
+        @include mobile
+            padding: 20px
+
+        .intro
+            &__item 
+                @include tablet
+                    padding-bottom: 20px 
+                    margin-bottom: 20px
+                    border-bottom: 1px solid rgba(255, 255, 255, .2)
+                @include mobileL
+                    padding-bottom: 25px 
+                    margin-bottom: 20px
+
+
+            &__list
+                height: auto
+                &--scroll
+                    margin: 0
+                    width: 100%
+                    padding: 0
+                    border: none
+                &--favorites
+                    height: auto
+                    max-height: inherit
+                    padding-right: 0
+
+            &__list-button
+                outline: none
+                background-color: $black
+                padding: 8px 11px
+                margin-left: 10px
+                font-size: 16px
+                border: 1px solid #00E0FF
+                border-radius: 10px
+                color: $white
+                cursor: pointer
+                transition: .3s ease all
+                @include laptop1480
+                    font-size: 14px
+
+                &:hover
+                    color: $black
+                    background-color: #00E0FF
+
+            &__favorite-button
+                display: flex
+                padding: 0
+                margin-right: 17px
+                width: 22px
+                height: 20px
+                border: none
+                background-color: transparent
+                cursor: pointer
+                svg
+                    path
+                        fill: white
+                        opacity: 0.1
+                        transition: .3s ease all
+                
+                &.active
+                    svg
+                        path
+                            fill: #00E0FF
+                            opacity: 1
+
+            &__item-wrapper
+                display: flex
+                align-items: center
+                flex-flow: row nowrap
+                @include mobileL
+                    width: 100%
+                    justify-content: space-between
+                    &:first-child
+                        margin-bottom: 20px
+                    
+
+    &__service-wrapper
+        width: 100%
+        overflow-x: auto
+        overflow-y: hidden
+        &::-webkit-scrollbar
+            display: none
+
+    &__service-table
+        padding: 0 40px
+        @include tablet
+            min-width: 1080px
+
+    &__service-table-header
+        display: flex
+        flex-flow: row nowrap
+        align-items: center
+        padding: 13px 40px 12px
+        margin-bottom: 20px
+        background: rgba(0,224,255,0.2)
+        backdrop-filter: blur(25px)
+
+    &__service-table-body
+        height: 60vh
+        overflow-y: auto
+        padding-bottom: 50px
+        &::-webkit-scrollbar
+            display: none
+        @include laptop1290
+            height: 40vh
+        @media (max-width: 1441px) and (max-height: 815px)
+            height: 400px
+
+    &__table-item
+        width: 13%
+        display: flex
+        align-items: center
+        flex-flow: row nowrap
+        &:nth-child(3), &:nth-child(4)
+            width: 24%
+        
+        &.title
+            font-size: 13px
+            font-family: 'Kharkiv Tone'
+            text-transform: uppercase
+            color: #00E0FF
+            line-height: 25px
+
+        &.text
+            font-family: 'Poppins'
+            font-size: 16px
+            line-height: 20px
+            color: $white
+    
+    &__table-logo
+        margin-right: 10px
+        
+    &__nav-button 
+        border: none
+        outline: none
+        cursor: pointer
+        width: 40px
+        height: 40px
+        border-radius: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        &.submit
+            background: #8AE245
+            margin-right: 10px
+        &.reset
+            background: #FE186B
+
+    &__service-item
+        display: flex
+        flex-flow: row nowrap
+        align-items: center
+        padding: 13px 40px 12px
+        margin-bottom: 10px
+        background: rgba(255,255,255,0.1)
+
+    &__table-status 
+        flex-shrink: 0
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        margin-right: 10px
+        background-color: transparent
+
+        &.green
+            background-color: green
+        &.yellow
+            background-color: #FFD748
+        &.red
+            background-color: red

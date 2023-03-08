@@ -1,0 +1,34 @@
+{
+  "name": "optimizedhtml",
+  "version": "1.0.0",
+  "description": "OptimizedHTML 5 - Lightweight Gulp Starter",
+  "main": "index.js",
+  "author": "Penguin DEV",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "bootstrap": "^5.2.3",
+    "browser-sync": "^2.28.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-rsync": "^0.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "webpack-stream": "^7.0.0"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "type": "module",
+  "dependencies": {
+    "firebase": "^9.14.0",
+    "jquery-touchswipe": "^1.6.19",
+    "sass": "^1.58.3"
+  }
+}

@@ -1,0 +1,827 @@
+.intro
+  //min-height: 100vh
+  min-height: 1080px
+  position: relative
+  overflow: hidden
+  display: flex
+  flex-flow: wrap
+  align-items: flex-end
+  @include onlyNotebook
+    min-height: 100vh
+  @include tablet
+    min-height: 100vh
+    background: #090909
+  .container-2
+    margin-bottom: 0
+    @include tablet
+      padding: 0px 20px
+  &__exit
+    position: absolute
+    right: 20px
+    top: 20px
+    color: $white
+    cursor: pointer
+    @include p2
+    font-family: 'Poppins'
+    opacity: 0
+    visibility: hidden
+    transition: .5s
+    &.active
+      opacity: 1
+      visibility: visible
+      @include tablet
+        display: none !important
+  &__t-text
+    position: absolute
+    z-index: 2
+    left: 0
+    right: 0
+    margin: auto
+    top: 27%
+    width: 100%
+    max-width: 1502px
+    padding: 0px 30px
+    transition: 2s
+    opacity: 1
+    visibility: visible
+    @include onlyNotebook
+      top: 150px
+    @include tablet
+      margin-top: 200px
+      padding: 0
+      position: static
+      max-width: 340px
+  &__main
+    position: absolute
+    left: -900px
+    top: -500px
+    bottom: 0
+    object-fit: cover
+    object-position: top
+    transition: 3s ease-in-out
+    @include tablet
+      // width: 1100.83px
+      // height: 1316.76px
+      top: -500px
+      left: -1207px
+    @include mobile
+      // top: -50%
+      // left: -35%
+  &__effect
+    position: absolute
+    left: 0
+    top: 0
+    max-width: 1731px
+    max-height: 1257px
+    object-fit: contain
+    z-index: 2
+    transition: .5s
+    @include laptop
+      top: -185px
+      left: -250px
+    &--mob
+      display: none
+      @include mobile
+        position: absolute
+        left: 0
+        top: 0
+        display: inline-block
+  &__mol
+    position: absolute
+    left: 0
+    bottom: -100px
+    transition: .5s
+    opacity: 1
+    @include tablet
+      opacity: 1 !important
+      width: 464px
+      height: 150px
+      bottom: 0
+  &__title
+    background: linear-gradient(133.23deg, #FFFFFF 52.81%, #40C9FF 184.45%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    font-family: $font_tone
+    font-style: normal
+    font-weight: 400
+    font-size: 160px
+    line-height: 160px
+    max-width: 712px
+    position: relative
+    z-index: 3
+    @include onlyNotebook
+      font-size: 100px
+      line-height: 100px
+    @include laptop
+      max-width: 100%
+    @include tablet
+      font-size: 60px
+      line-height: 60px
+    img
+      position: absolute
+      right: 175px
+      top: -10px
+      object-fit: contain
+      @include onlyNotebook
+        width: 120px
+        left: 200px
+        top: -30px
+      @include laptop
+        top: -140px
+        left: 500px
+      @include tablet
+        left: auto
+        width: 70px
+        height: 70px
+        right: 155px
+        top: 8px
+  &__subtitle
+    display: inline-flex
+    align-items: center
+    @include h4
+    position: relative
+    z-index: 1
+    min-height: 40px
+    @include onlyNotebook
+      font-size: 32px
+    @include tablet
+      font-size: 18px
+      min-height: 40px
+    i
+      min-width: 10px
+      font: inherit
+    &:after
+      content: ""
+      width: 5px
+      height: 40px
+      background: $blue
+      display: inline-block
+      margin-left: 15px
+      animation: fadein .5s ease-in alternate infinite
+      @include tablet
+        width: 2px
+        height: 28px
+  &__table
+    width: 100%
+    position: relative
+    margin-top: 95px
+    z-index: 5
+    margin-bottom: 70px
+    max-height: 255px
+    overflow: hidden
+    transition: 3s
+    @include tablet
+      max-height: unset
+      margin-top: 30px
+    &--content
+      background: rgba(0, 0, 0, 0.4)
+      backdrop-filter: blur(25px)
+      padding: 40px 80px 20px 80px
+      border-top: 1px solid #00E0FF
+      @include tablet
+        padding: 10px
+  &__head
+    display: flex
+    flex-flow: wrap
+    div
+      padding: 10px 38px
+      @include p0
+      color: $white
+      font-family: $font_tone
+      cursor: pointer
+      transition: .5s
+      @include tablet
+        width: 50%
+        text-align: center
+      &:hover
+        color: $blue
+      &.active
+        color: $black
+        background: $blue
+        &:hover
+          color: $black
+  &__filters
+    display: flex
+    flex-flow: wrap
+    justify-content: space-between
+    margin-top: 20px
+  &__filter
+    width: 30%
+    max-width: 400px
+    display: flex
+    flex-flow: wrap
+    position: relative
+    @include laptop1290
+      max-width: 100%
+      width: 100%
+      margin-bottom: 30px
+    >svg
+      position: absolute
+      right: 0px
+      top: 32px
+      cursor: pointer
+      z-index: 2
+    &.open
+      .select2-search
+        opacity: 1 !important
+        visibility: visible !important
+    label
+      width: 100%
+      display: inline-block
+      margin-bottom: 10px
+      padding-left: 10px
+      font-family: 'Poppins'
+      @include p4
+      color: rgba(255,255,255,.5)
+
+  &__list
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    //max-height: 55.5vh
+    max-height: 600px
+    overflow: auto
+    padding-right: 60px
+    @include tablet
+      margin-top: 10px
+      max-height: 55vh
+    @include tabletL
+      padding-right: 50px
+    @include mobile
+      // padding-right: 0px
+    &::-webkit-scrollbar
+      -webkit-appearance: none
+      width: 5px
+      border-radius: 10px
+      background-color: rgba(255,255,255, .1)
+    &::-webkit-scrollbar-thumb
+      border-radius: 10px
+      background-color: $blue
+
+    &--scroll
+      width: calc(100% + 160px)
+      margin-left: -80px
+      padding-left: 80px
+      padding-right: 20px
+      margin-top: 60px
+      padding-top: 40px
+      border-top: 1px solid rgba(255,255,255,.1)
+      @include tablet
+        margin-top: 10px
+    &--main
+      @include onlyNotebook
+        max-height: 380px
+
+  &__item
+    max-width: 32%
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 15px
+    width: 100%
+    margin-right: 2%
+    cursor: pointer
+    padding: 5px
+    @include screen1380
+      margin-right: 0
+      max-width: 48%
+    @include tablet
+      max-width: 100%
+      margin-right: 0
+    @include mobileL
+      // flex-direction: column
+      padding: 0
+      margin-bottom: 30px
+
+    img
+      margin-right: 15px
+      background: #fff
+      padding: 3px
+      object-fit: contain
+      width: 40px
+      height: 40px
+      @include screen1380
+        width: 30px
+        height: 30px
+      @include laptop1270
+        width: 25px
+        height: 25px
+
+    &:nth-child(3n)
+      margin-right: 0
+
+    span
+      @include p2
+      font-family: 'Poppins'
+      color: #FFFFFF
+      @include laptop1480
+        font-size: 14px
+    &--left
+      display: flex
+      align-items: center
+      span
+        font-weight: 500
+    &--right
+      display: flex
+      align-items: center
+      span
+        display: block
+        &:last-child
+          padding: 10px 15px
+          background: rgba(255,255,255, .1)
+          margin-left: 14px
+          border-radius: 10px
+
+    &.active
+      background: rgba(255,255,255,.1)
+      div
+        &:last-child
+          span
+            &:last-child
+              background: $blue
+              color: $black
+  &.hide
+    .intro
+      &__effect
+        opacity: 0
+      &__t-text
+        opacity: 0
+        visibility: hidden
+        @include tablet
+          opacity: 1
+          visibility: visible
+      &__table
+        transition-delay: .3s
+        max-height: 1000px
+      &__mol
+        opacity: 0
+
+  &.stopTransition
+    .intro
+      &__main
+        transition: 0s !important
+        bottom: auto !important
+        top: -400px !important
+
+  &.reverse
+    .intro
+      &__main
+        left: 0 !important
+        bottom: 0 !important
+
+.select2
+
+  &-dropdown
+    background: rgba(9, 9, 9, 0.4)
+    backdrop-filter: blur(25px)
+    padding: 0 10px
+    margin-top: 65px
+  &-container
+    width: 100% !important
+    &--open
+      .select2
+        &-search
+          //opacity: 1 !important
+          //visibility: visible !important
+    &--dropdown
+      background: none !important
+    .select2-results
+      display: block !important
+      &__option
+        padding: 10px 0
+        &--selected
+          background-color: transparent !important
+        &--selectable
+          color: $white !important
+          font-family: 'Neue Machina'
+          background: transparent !important
+          padding-left: 10px !important
+          font-weight: 500 !important
+          font-size: 16px !important
+          line-height: 20px !important
+  &-search
+    width: 100%
+    position: absolute
+    left: 0 !important
+    opacity: 0 !important
+    visibility: hidden !important
+    &:after
+      content: ""
+      width: 25px
+      height: 25px
+      display: inline-block
+      background: url('../img/search.svg')
+      background-size: contain
+      position: absolute
+      right: 10px
+      top: 10px
+      bottom: 0
+      margin: auto
+    textarea
+      width: 100% !important
+      color: #ffffff !important
+      margin: 0 !important
+      margin-top: 15px !important
+      padding: 10px 10px 6px 10px !important
+    &--dropdown
+      padding: 0 !important
+    &__field
+      background: rgba(255,255,255,.1) !important
+      border: none !important
+      margin-top: 10px !important
+      border-radius: 10px !important
+      min-height: 40px !important
+      margin-bottom: 10px !important
+      @include tablet
+        background: #2C302F !important
+
+  &-selection
+    &__choice
+      background: 0 !important
+      padding: 0 !important
+      border: none !important
+      display: flex !important
+      align-items: center !important
+      margin: 0 !important
+      margin-right: 15px !important
+      span
+        font-family: 'Neue Machina'
+        i
+          margin-left: 5px
+          color: $blue
+      button
+        order: 1 !important
+        position: static !important
+        padding: 0 !important
+        width: 17px !important
+        height: 17px !important
+        display: flex !important
+        align-items: center !important
+        justify-content: center !important
+        background: #00E0FF !important
+        border-radius: 50% !important
+        margin-left: 11px !important
+        color: #000000 !important
+        margin-top: -3px !important
+        flex-shrink: 0
+
+    &--multiple
+      background: transparent !important
+      border: none !important
+      border-bottom: 1px solid $white !important
+      padding: 0px 10px 5px 10px !important
+      border-radius: 0 !important
+    &__rendered
+      display: flex !important
+      flex-flow: wrap !important
+      min-height: 30px
+      @include p1
+      font-weight: 500
+      font-family: $font_neue
+      color: $white !important
+      padding: 0 !important
+  &-results
+    &__option
+      color: #ffffff !important
+
+.select2-selection
+  &__choice
+    button
+      position: relative !important
+
+  &__reset
+    position: absolute
+    display: block
+    width: calc(100% - 6px)
+    height: calc(100% - 6px)
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    transform: rotate(-45deg)
+    &:before, &:after
+      content: ''
+      background: $black
+      top: 0
+      position: absolute
+    &:before
+      width: 100%
+      height: 1px
+      left: 0
+      bottom: 0
+      margin: auto 0
+    &:after
+      width: 1px
+      height: 100%
+      left: 0
+      right: 0
+      margin: 0 auto
+
+body>span.select2-container.select2-container--default.select2-container--open
+      display: none !important
+
+body>span.select2-container.select2-container--default.select2-container--open.open
+      display: inline-block !important
+
+.activation
+  position: relative
+  overflow: hidden
+  padding: 276px 0 233px
+  @include tablet
+    padding-top: 136px
+  >img
+    position: absolute
+    right: 0
+    top: 0
+    @include laptop
+      right: -200px
+    @include tablet
+      display: none
+  .container
+    position: relative
+    z-index: 2
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-flow: wrap
+  &__left
+    max-width: 49%
+    width: 100%
+    @include tablet
+      max-width: 100%
+      margin-bottom: 20px
+      position: relative
+    img,
+    &:last-child
+      position: absolute
+      right: -50px
+      top: -166px
+      @include tablet
+        width: 158px
+        height: 192px
+        object-fit: contain
+        top: -70px
+        right: -20px
+  &__earth
+    width: 100%
+    object-fit: contain
+    padding-right: 10px
+    max-width: 523px
+    max-height: 583px
+    margin-right: auto
+    margin-left: auto
+    @include tablet
+      max-width: 350px
+      max-height: 385px
+      padding: 0
+      margin: auto
+      left: -20px
+      position: relative
+  &__right
+    max-width: 51%
+    width: 100%
+    position: relative
+    z-index: 2
+    @include tablet
+      max-width: 100%
+    h2
+      @include h2
+      margin-bottom: 30px
+      transition-delay: .1s
+    p
+      @include p0
+      margin-bottom: 40px
+      transition-delay: .2s
+    a
+      transition: opacity .7s linear, transform .7s linear, filter .5s linear !important
+      color: $black
+      transition-delay: .3s, .3s, 0s !important
+      transition-property: opacity, transform, filter !important
+      &:hover
+        transition-delay: 0s !important
+
+.advantage
+  background: #090909
+  position: relative
+  &__nav, &__nav-2
+    display: none
+    @include tablet
+      display: flex
+      flex-flow: wrap
+      align-items: center
+      justify-content: center
+      margin-top: 20px
+      div
+        width: 12px
+        height: 12px
+        border-radius: 50%
+        border: 1px solid $white
+        transition: .5s
+        &:not(:last-child)
+          margin-right: 5px
+        &.active
+          background: $white
+  &__nav
+    position: absolute
+    bottom: 100px
+    width: 100%
+    left: 0
+  &__svg
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+    pointer-events: none
+  .container
+    position: relative
+    z-index: 2
+  .container-2
+    max-width: 1570px
+    @include tablet
+      position: relative
+      z-index: 2
+  &__moln
+    position: absolute
+    right: 0
+    top: -190px
+    max-width: 1200px
+    object-fit: contain
+  &__hash
+    max-width: 1440px
+    width: 100%
+    object-fit: contain
+    position: absolute
+    top: 300px
+    left: 0
+    right: 0
+    margin: auto
+    @include tablet
+      //top: 200px
+      height: 300px
+      width: 850px
+  &__circle
+    position: absolute
+    top: 131px
+    left: 214px
+  &__circle-2
+    position: absolute
+    top: 590px
+    right: 0
+  &__list
+    display: flex
+    flex-flow: wrap
+    justify-content: center
+    @include tablet
+      flex-flow: row
+      overflow: hidden
+      justify-content: flex-start
+      top: -160px
+      position: relative
+      padding-top: 90px
+    &.noTransition
+      @include tablet
+      >div
+        transition-delay: 0s !important
+        transition: 0s !important
+
+  &__item
+    width: 100%
+    max-width: 400px
+    background: rgba(9, 9, 9, 0.4)
+    backdrop-filter: blur(25px)
+    padding: 0px 40px 40px 40px
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    margin-top: -100px
+    transition-delay: .1s
+    align-items: flex-start
+    @include laptop
+      max-width: 30%
+    @include tablet
+      margin-top: 0
+      padding: 0px 30px 30px 30px !important
+      min-width: 100%
+      max-width: 100%
+
+    img
+      margin-top: -81px
+      object-fit: contain
+      position: relative
+      margin-bottom: 30px
+      @include tablet
+        max-width: 230px
+        max-height: 175px
+        margin-left: auto
+        margin-right: auto
+    &:not(:last-child)
+      margin-right: 40px
+    h2
+      @include h3
+      margin-bottom: 20px
+    p
+      @include p1
+      margin-bottom: 20px
+      @include tablet
+        margin-bottom: 30px
+        font-size: 18px
+
+    a
+      @include p0
+      font-family: $font_tone
+      color: $blue
+      transition: .3s
+      display: inline-block
+      position: relative
+      border-bottom: 1px solid transparent
+      &:after
+        content: ""
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0px
+        margin: auto
+        width: 0px
+        height: 1px
+        background: $blue
+        transition: .5s
+      &:hover
+        &:after
+          width: 100%
+
+  &__list-2
+    display: flex
+    flex-flow: wrap
+    justify-content: flex-start
+    @include laptop1580
+      justify-content: center
+    @include tablet
+      flex-flow: row
+      overflow: hidden
+      justify-content: flex-start
+    &.noTransition
+      @include tablet
+      >div
+        transition-delay: 0s !important
+        transition: 0s !important
+
+  &__item-2
+    width: 100%
+    max-width: 340px
+    padding: 0px 5px 40px 5px
+    @include laptop1580
+      max-width: 22%
+    @include tablet
+      min-width: 100%
+      max-width: 100%
+      padding: 0 0 30px 0
+    img
+      margin: 0 auto 37px auto
+      object-fit: contain
+      position: relative
+    &:not(:last-child)
+      margin-right: 50px
+      @include laptop
+        margin-right: 4%
+      @include tablet
+        margin-right: 40px
+    h3
+      display: inline-block
+      width: 100%
+      text-align: center
+      @include h3
+      margin-bottom: 20px
+      color: $blue
+    p
+      display: inline-block
+      width: 100%
+      text-align: center
+      color: $blue
+      @include p1
+  &__title
+    text-align: center
+    max-width: 835px
+    margin: 150px auto 100px auto
+    @include h2
+    color: $white
+    @include tablet
+      margin-bottom: 50px
+      margin-top: -40px
+
+@for $i from 1 through 3
+  .advantage__item:nth-child(#{$i}n)
+    transition-delay: #{$i * 0.5}s
+
+@for $i from 1 through 4
+  .advantage__item-2:nth-child(#{$i}n)
+    transition-delay: #{$i * 0.5}s
+
+@keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1

@@ -1,0 +1,255 @@
+// media variables
+$k2: 2560px
+$desktop: 1920px
+$laptopL: 1760px
+$laptopxl: 1700px
+$laptop1580: 1580px
+$laptop1480: 1480px
+$laptopProd: 1450px
+$laptopM: 1441px
+$laptopS: 1380px
+$tabletM: 1201px
+$tabletL: 1024px
+$tabletI: 940px
+$tablet: 1200px
+$tabletXS: 720px
+$tabletS: 625px
+$mobileL: 480px
+$mobileM: 414px
+$mobileS: 360px
+$laptop1290: 1290px
+$laptop1270: 1270px
+
+$general-transition-duraction: 0.6s
+
+@mixin onlyNotebook
+  @media (max-width: 1441px) and (min-width: 1200px)
+    @content
+
+@mixin mobileL
+  @media (max-width: $mobileL)
+    @content
+
+@mixin tabletXS
+  @media (max-width: $tabletXS)
+    @content
+
+@mixin mobile
+  @media (max-width: $tabletS)
+    @content
+
+@mixin tabletL
+  @media (max-width: $tabletL)
+    @content
+
+@mixin tabletI
+  @media (max-width: $tabletI)
+    @content
+
+@mixin tablet
+  @media (max-width: $tabletM)
+    @content
+
+@mixin screen1380
+  @media (max-width: $laptopS)
+    @content
+
+@mixin laptopProd
+  @media (max-width: $laptopProd)
+    @content
+
+@mixin middleTablet
+  @media (max-width: $tabletM)
+    @content
+
+@mixin laptopHD
+  @media (min-width: $laptopM)
+    @content
+
+@mixin laptop
+  @media (max-width: $laptopM)
+    @content
+
+@mixin laptop1760
+  @media (min-width: $laptopL+1)
+    @content
+
+@mixin laptopxl
+  @media (max-width: $laptopxl)
+    @content
+
+@mixin laptop1580
+  @media (max-width: $laptop1580)
+    @content
+
+@mixin laptop1480
+  @media (max-width: $laptop1480)
+    @content
+
+@mixin laptop1270
+  @media (max-width: $laptop1270)
+    @content
+
+@mixin laptop1290
+  @media (max-width: $laptop1290)
+    @content
+
+@mixin tablet
+  @media (max-width: $tablet)
+    @content
+
+//-------------------------------------------------------
+//---------------------- Color --------------------------
+//-------------------------------------------------------
+
+$black: #090909
+$white: #ffffff
+$blue: #00E0FF
+
+$font_tone: 'Kharkiv Tone'
+$font_neue: 'Neue Machina'
+
+//-------------------------------------------------------
+//---------------------- Title --------------------------
+//-------------------------------------------------------
+
+@mixin h2
+  font-family: 'Kharkiv Tone'
+  font-style: normal
+  font-weight: 400
+  font-size: 45px
+  line-height: 1.22
+  color: $black
+  @include tablet
+    font-size: 35px
+
+@mixin h3
+  font-family: 'Kharkiv Tone'
+  font-style: normal
+  font-weight: 400
+  font-size: 30px
+  line-height: 1.17
+  color: $white
+  @include tablet
+    font-size: 25px
+
+@mixin h4
+  font-family: 'Kharkiv Tone'
+  font-style: normal
+  font-weight: 400
+  font-size: 40px
+  line-height: 1.5
+  color: $white
+
+@mixin h5
+  font-family: 'Kharkiv Tone'
+  font-style: normal
+  font-weight: 400
+  font-size: 24px
+  line-height: 1.17
+  color: $white
+//-------------------------------------------------------
+//--------------------- paragraph -----------------------
+//-------------------------------------------------------
+@mixin p0
+  font-family: 'Poppins'
+  font-style: normal
+  font-weight: 400
+  font-size: 20px
+  line-height: 1.75
+  color: $black
+  @include tablet
+    font-size: 17px
+    line-height: 1.59
+
+@mixin p1
+  font-family: 'Kharkiv Tone'
+  font-style: normal
+  font-weight: 400
+  font-size: 18px
+  line-height: 1.67
+  color: $white
+  @include tablet
+    font-size: 17px
+
+@mixin p2
+  font-family: 'Kharkiv Tone'
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 1.4
+  color: $white
+
+@mixin p3
+  font-family: 'Kharkiv Tone'
+  font-style: normal
+  font-weight: 400
+  font-size: 12px
+  line-height: 1.4
+  color: $white
+
+@mixin p4
+  font-family: 'Kharkiv Tone'
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 1.4
+
+@mixin p5
+  font-family: 'Poppins'
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  @include tablet
+    font-size: 14px
+
+//-------------------------------------------------------
+//---------------------- Button --------------------------
+//-------------------------------------------------------
+
+.btn-1
+  display: inline-block
+  text-align: center
+  background: linear-gradient(180deg, #84F0FF 0%, #00E0FF 100%)
+  box-shadow: 0px 10px 20px -5px rgba(0, 224, 255, 0.25)
+  width: 220px
+  padding: 14px 11px 11px 11px
+  @include p0
+  font-family: 'Kharkiv Tone'
+  color: $white
+  text-shadow: 0px 1px 2px rgba(0, 194, 255, 0.7)
+  border: none
+  outline: none
+  filter: drop-shadow(0px 0px 0px #45E9FF)
+  transition: .7s
+  &:hover
+    filter: drop-shadow(0px 2px 15px #45E9FF)
+  @include tablet
+    color: $black
+    width: 180px
+    font-size: 18px
+    padding: 8px
+
+@mixin defaul-pseudo-element($width, $height: $width)
+  content: ''
+  position: absolute
+  width: $width
+  height: $height
+
+@mixin centering-absolute-element()
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin centering-height-absolute-element()
+  top: 50%
+  transform: translateY(-50%)
+
+@mixin centering-horisontal-absolute-element()
+  left: 50%
+  transform: translateX(-50%)
+
+@mixin button-none
+  background: none
+  border: none
+  padding: 0

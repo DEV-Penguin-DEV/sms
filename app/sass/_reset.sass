@@ -1,0 +1,64 @@
+h1,h2,h3,h4,h5,h6,p,ul,body
+  margin: 0
+  padding: 0
+*
+  font-family: Gilroy
+  font-style: normal
+  -webkit-tap-highlight-color: transparent
+a
+  text-decoration: none
+img
+  display: block
+main
+  overflow: hidden
+
+ul,li
+  list-style: none
+
+input,textarea
+  padding: 0
+  margin: 0
+  border-width: 1px
+  -webkit-appearance: none
+  appearance: none
+  border-radius: 0
+  line-height: 1.1
+  border: none
+  outline: none
+
+body::-webkit-scrollbar
+  width: 0px
+  height: 0px
+  transition: .5s
+body
+  &::-webkit-scrollbar-thumb
+    background: $black
+input[type='number']
+  -moz-appearance: textfield
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+input
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active
+    font-family: Gilroy
+    border: 0
+    -webkit-text-fill-color: #fff
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset
+    transition: background-color 5000s ease-in-out 0s
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%)
+    border-bottom: 1px solid #626573
+  &:-webkit-autofill::first-line
+      font-family: Gilroy
+      font-weight: 500
+      font-size: 14px
+      line-height: 1.3
+      color: #FFFFFF
+      @media (max-width: $laptopL)
+        font-size: 14px
+      @media (max-width: $tabletL)
+        font-size: 14px
