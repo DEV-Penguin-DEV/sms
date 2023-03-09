@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.min.css">
     <link rel="stylesheet" href="css/select-min.css">
     <title>SMS</title>
@@ -36,7 +36,7 @@
                         d="M9.0001 7.9C7.8501 7.9 6.9126 7.5375 6.1876 6.8125C5.4626 6.0875 5.1001 5.15 5.1001 4C5.1001 2.85 5.4626 1.9125 6.1876 1.1875C6.9126 0.4625 7.8501 0.1 9.0001 0.1C10.1501 0.1 11.0876 0.4625 11.8126 1.1875C12.5376 1.9125 12.9001 2.85 12.9001 4C12.9001 5.15 12.5376 6.0875 11.8126 6.8125C11.0876 7.5375 10.1501 7.9 9.0001 7.9ZM0.850098 16.225V13.725C0.850098 13.0583 1.01676 12.4875 1.3501 12.0125C1.68343 11.5375 2.10843 11.175 2.6251 10.925C3.75843 10.425 4.84176 10.05 5.8751 9.8C6.90843 9.55 7.9501 9.425 9.0001 9.425C10.0501 9.425 11.0876 9.55417 12.1126 9.8125C13.1376 10.0708 14.2168 10.4417 15.3501 10.925C15.8834 11.175 16.3168 11.5375 16.6501 12.0125C16.9834 12.4875 17.1501 13.0583 17.1501 13.725V16.225H0.850098Z"
                         fill="#00E0FF" />
                 </svg>
-                <span>Профиль</span>
+                <span>Morgan Willson</span>
             </a>
             <div class="header__lang">
                 <div class="header__lang--current">
@@ -157,7 +157,402 @@
                 </div>
             </div>
             <div class="partner-cabinet__service-wrapper">
+                <div class="partners-worker-cabinet__service-top-container">
+                    <p class="partners-worker-cabinet__showing">
+                        Showing: <span class="partners-worker-cabinet__showing-count">1-64 / 145</span>
+                    </p>
+                    <ul class="partners-worker-cabinet__filters-list">
+                        <li class="partners-worker-cabinet__filters-item">
+                            Set carrier
+                        </li>
+                        <li class="partners-worker-cabinet__filters-item">
+                            Work mode
+                        </li>
+                        <li class="partners-worker-cabinet__filters-item">
+                            Send USSD
+                        </li>
+                        <li class="partners-worker-cabinet__filters-item partners-worker-cabinet__filters-item--active">
+                            Send SMS
+                        </li>
+                        <li class="partners-worker-cabinet__filters-item">
+                            Resets & Limits
+                        </li>
+                    </ul>
+                    <form action="#" class="partners-worker-cabinet__searching-form">
+                        <input type="text" name="searching" class="partners-worker-cabinet__searching-input">
+                        <button type="submit"
+                            class="partners-worker-cabinet__searching-submit button-controler button-controler--blue button-controler--text">PIN</button>
+                    </form>
+                </div>
+                <div class="partners-worker-cabinet__service-table">
+                    <div class="partner-cabinet__service-table-header partner-cabinet__service-table-header--pw">
+                        <div class="partner-cabinet__table-item title">
+                            <input
+                                class="partner-cabinet__table-item__checkbox-input partner-cabinet__table-item__checkbox-input--title"
+                                id="partner-cabinet__table-item__checkbox-title" type="checkbox">
+                            <label
+                                class="partner-cabinet__table-item__checkbox-label partner-cabinet__table-item__checkbox-label--title"
+                                for="partner-cabinet__table-item__checkbox-title"></label>
+                        </div>
+                        <div class="partner-cabinet__table-item title">Ropt</div>
+                        <div class="partner-cabinet__table-item title">Sim</div>
+                        <div class="partner-cabinet__table-item title">GSM</div>
+                        <div class="partner-cabinet__table-item title">Work</div>
+                        <div class="partner-cabinet__table-item title">country</div>
+                        <div class="partner-cabinet__table-item title">number</div>
+                        <div class="partner-cabinet__table-item title">carrier</div>
 
+                        <div class="partner-cabinet__table-item title">imei</div>
+                        <div class="partner-cabinet__table-item title">in/out</div>
+                        <div class="partner-cabinet__table-item title">Limit</div>
+                        <div class="partner-cabinet__table-item title">Balance</div>
+                        <div class="partner-cabinet__table-item title">Network</div>
+                        <div class="partner-cabinet__table-item title">activations</div>
+                        <div class="partner-cabinet__table-item title">profit</div>
+                        <div class="partner-cabinet__table-item title">
+                            <img src="img/question-icon.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="partner-cabinet__service-table-body partner-cabinet__service-table-body--pw">
+                        <div class="partner-cabinet__service-item">
+                            <div class="partner-cabinet__table-item input">
+                                <input class="partner-cabinet__table-item__checkbox-input"
+                                    id="partner-cabinet__table-item__checkbox-1" type="checkbox">
+                                <label class="partner-cabinet__table-item__checkbox-label"
+                                    for="partner-cabinet__table-item__checkbox-1"></label>
+                            </div>
+                            <div class="partner-cabinet__table-item text">
+                                <span>422</span>
+                            </div>
+                            <div class="partner-cabinet__table-item sim">
+                                <div class="sim-status sim-status--red"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item gsm">
+                                <div class="gsm-status gsm-status--green"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item work">
+                                <div class="work-status">
+                                    <span>IN</span>
+                                </div>
+                            </div>
+                            <div class="partner-cabinet__table-item country">
+                                <img src="img/flag-ua.svg" alt="flag-ua" srcset="">
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item text">
+                                Lycamobile
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item in-out"><span class="in-out--red">14</span> | <span
+                                    class="in-out--green">29</span></div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">15</div>
+                            <div class="partner-cabinet__table-item text">rssi:23</div>
+                            <div class="partner-cabinet__table-item activations">
+                                <div class="activations__progress"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item text">2.300</div>
+                            <div class="partner-cabinet__table-item open-more">
+                                <button class="open-more__button"></button>
+                            </div>
+                        </div>
+                        <div class="partner-cabinet__service-item">
+                            <div class="partner-cabinet__table-item">
+                                <input class="partner-cabinet__table-item__checkbox-input"
+                                    id="partner-cabinet__table-item__checkbox-2" type="checkbox">
+                                <label class="partner-cabinet__table-item__checkbox-label"
+                                    for="partner-cabinet__table-item__checkbox-2"></label>
+                            </div>
+                            <div class="partner-cabinet__table-item text">
+                                <span>3</span>
+                            </div>
+                            <div class="partner-cabinet__table-item sim">
+                                <div class="sim-status sim-status--green"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item gsm">
+                                <div class="gsm-status gsm-status--empty"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item work">
+                                <div class="work-status">
+                                    <span>IN</span>
+                                </div>
+                            </div>
+
+                            <div class="partner-cabinet__table-item country">
+                                <img src="img/flag-uk.svg" alt="flag-uk" srcset="">
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item text">
+                                Lycamobile
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item in-out"><span class="in-out--red">14</span> | <span
+                                    class="in-out--green">29</span></div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">rssi:23</div>
+                            <div class="partner-cabinet__table-item activations">
+                                <div class="activations__progress"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item text">1658</div>
+                            <div class="partner-cabinet__table-item open-more">
+                                <button class="open-more__button"></button>
+                            </div>
+                        </div>
+                        <div class="partner-cabinet__service-item">
+                            <div class="partner-cabinet__table-item">
+                                <input class="partner-cabinet__table-item__checkbox-input"
+                                    id="partner-cabinet__table-item__checkbox-3" type="checkbox">
+                                <label class="partner-cabinet__table-item__checkbox-label"
+                                    for="partner-cabinet__table-item__checkbox-3"></label>
+                            </div>
+                            <div class="partner-cabinet__table-item text">
+                                <span>422</span>
+                            </div>
+                            <div class="partner-cabinet__table-item sim">
+                                <div class="sim-status sim-status--red"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item gsm">
+                                <div class="gsm-status gsm-status--green"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item work">
+                                <div class="work-status">
+                                    <span>IN</span>
+                                </div>
+                            </div>
+                            <div class="partner-cabinet__table-item country">
+                                <img src="img/flag-ua.svg" alt="flag-ua" srcset="">
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item text">
+                                Lycamobile
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item in-out"><span class="in-out--red">14</span> | <span
+                                    class="in-out--green">29</span></div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">15</div>
+                            <div class="partner-cabinet__table-item text">rssi:23</div>
+                            <div class="partner-cabinet__table-item activations">
+                                <div class="activations__progress"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item text">931</div>
+                            <div class="partner-cabinet__table-item open-more">
+                                <button class="open-more__button"></button>
+                            </div>
+                        </div>
+                        <div class="partner-cabinet__service-item">
+                            <div class="partner-cabinet__table-item">
+                                <input class="partner-cabinet__table-item__checkbox-input"
+                                    id="partner-cabinet__table-item__checkbox-4" type="checkbox">
+                                <label class="partner-cabinet__table-item__checkbox-label"
+                                    for="partner-cabinet__table-item__checkbox-4"></label>
+                            </div>
+                            <div class="partner-cabinet__table-item text">
+                                <span>3</span>
+                            </div>
+                            <div class="partner-cabinet__table-item sim">
+                                <div class="sim-status sim-status--green"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item gsm">
+                                <div class="gsm-status gsm-status--green"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item work">
+                                <div class="work-status">
+                                    <span>IN</span>
+                                </div>
+                            </div>
+                            <div class="partner-cabinet__table-item country">
+                                <img src="img/flag-uk.svg" alt="flag-uk" srcset="">
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item text">
+                                Lycamobile
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item in-out"><span class="in-out--red">14</span> | <span
+                                    class="in-out--green">29</span></div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">rssi:23</div>
+                            <div class="partner-cabinet__table-item activations">
+                                <div class="activations__progress"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item open-more">
+                                <button class="open-more__button"></button>
+                            </div>
+                        </div>
+                        <div class="partner-cabinet__service-item">
+                            <div class="partner-cabinet__table-item">
+                                <input class="partner-cabinet__table-item__checkbox-input"
+                                    id="partner-cabinet__table-item__checkbox-5" type="checkbox">
+                                <label class="partner-cabinet__table-item__checkbox-label"
+                                    for="partner-cabinet__table-item__checkbox-5"></label>
+                            </div>
+                            <div class="partner-cabinet__table-item text">
+                                <span>422</span>
+                            </div>
+                            <div class="partner-cabinet__table-item sim">
+                                <div class="sim-status sim-status--red"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item gsm">
+                                <div class="gsm-status gsm-status--red"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item work">
+                                <div class="work-status">
+                                    <span>IN</span>
+                                </div>
+                            </div>
+                            <div class="partner-cabinet__table-item country">
+                                <img src="img/flag-ua.svg" alt="flag-ua" srcset="">
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item text">
+                                Lycamobile
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item in-out"><span class="in-out--red">14</span> | <span
+                                    class="in-out--green">29</span></div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">15</div>
+                            <div class="partner-cabinet__table-item text">rssi:23</div>
+                            <div class="partner-cabinet__table-item activations">
+                                <div class="activations__progress"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item text">714</div>
+                            <div class="partner-cabinet__table-item open-more">
+                                <button class="open-more__button"></button>
+                            </div>
+                        </div>
+                        <div class="partner-cabinet__service-item">
+                            <div class="partner-cabinet__table-item">
+                                <input class="partner-cabinet__table-item__checkbox-input"
+                                    id="partner-cabinet__table-item__checkbox-6" type="checkbox">
+                                <label class="partner-cabinet__table-item__checkbox-label"
+                                    for="partner-cabinet__table-item__checkbox-6"></label>
+                            </div>
+                            <div class="partner-cabinet__table-item text">
+                                <span>3</span>
+                            </div>
+                            <div class="partner-cabinet__table-item sim">
+                                <div class="sim-status sim-status--green"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item gsm">
+                                <div class="gsm-status gsm-status--empty"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item work">
+                                <div class="work-status">
+                                    <span>IN</span>
+                                </div>
+                            </div>
+                            <div class="partner-cabinet__table-item country">
+                                <img src="img/flag-uk.svg" alt="flag-uk" srcset="">
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item text">
+                                Lycamobile
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item in-out"><span class="in-out--red">14</span> | <span
+                                    class="in-out--green">29</span></div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">rssi:23</div>
+                            <div class="partner-cabinet__table-item activations">
+                                <div class="activations__progress"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item text">1025</div>
+                            <div class="partner-cabinet__table-item open-more">
+                                <button class="open-more__button"></button>
+                            </div>
+                        </div>
+                        <div class="partner-cabinet__service-item">
+                            <div class="partner-cabinet__table-item">
+                                <input class="partner-cabinet__table-item__checkbox-input"
+                                    id="partner-cabinet__table-item__checkbox-7" type="checkbox">
+                                <label class="partner-cabinet__table-item__checkbox-label"
+                                    for="partner-cabinet__table-item__checkbox-7"></label>
+                            </div>
+                            <div class="partner-cabinet__table-item text">
+                                <span>422</span>
+                            </div>
+                            <div class="partner-cabinet__table-item sim">
+                                <div class="sim-status sim-status--red"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item gsm">
+                                <div class="gsm-status gsm-status--empty"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item work">
+                                <div class="work-status">
+                                    <span>IN</span>
+                                </div>
+                            </div>
+                            <div class="partner-cabinet__table-item country">
+                                <img src="img/flag-ua.svg" alt="flag-ua" srcset="">
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item text">
+                                Lycamobile
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item in-out"><span class="in-out--red">14</span> | <span
+                                    class="in-out--green">29</span></div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">15</div>
+                            <div class="partner-cabinet__table-item text">rssi:23</div>
+                            <div class="partner-cabinet__table-item activations">
+                                <div class="activations__progress"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item text">218</div>
+                            <div class="partner-cabinet__table-item open-more">
+                                <button class="open-more__button"></button>
+                            </div>
+                        </div>
+                        <div class="partner-cabinet__service-item">
+                            <div class="partner-cabinet__table-item">
+                                <input class="partner-cabinet__table-item__checkbox-input"
+                                    id="partner-cabinet__table-item__checkbox-8" type="checkbox">
+                                <label class="partner-cabinet__table-item__checkbox-label"
+                                    for="partner-cabinet__table-item__checkbox-8"></label>
+                            </div>
+                            <div class="partner-cabinet__table-item text">
+                                <span>3</span>
+                            </div>
+                            <div class="partner-cabinet__table-item sim">
+                                <div class="sim-status sim-status--red"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item gsm">
+                                <div class="gsm-status gsm-status--red"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item work">
+                                <div class="work-status">
+                                    <span>IN</span>
+                                </div>
+                            </div>
+                            <div class="partner-cabinet__table-item country">
+                                <img src="img/flag-uk.svg" alt="flag-uk" srcset="">
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item text">
+                                Lycamobile
+                            </div>
+                            <div class="partner-cabinet__table-item text">94742223510002012281</div>
+                            <div class="partner-cabinet__table-item in-out"><span class="in-out--red">14</span> | <span
+                                    class="in-out--green">29</span></div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item text">rssi:23</div>
+                            <div class="partner-cabinet__table-item activations">
+                                <div class="activations__progress"></div>
+                            </div>
+                            <div class="partner-cabinet__table-item text">0</div>
+                            <div class="partner-cabinet__table-item open-more">
+                                <button class="open-more__button"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

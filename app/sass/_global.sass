@@ -33,6 +33,7 @@ section
     position: relative
     background-image: url('../img/partners-worker.jpg')
     background-size: cover
+
     &::before
       @include defaul-pseudo-element(100%)
       display: block
@@ -47,6 +48,102 @@ section
       -webkit-backdrop-filter: none
       backdrop-filter: none
       border-radius: 0
+    & .partner-cabinet__service-wrapper
+      display: flex
+      flex-direction: column
+      gap: 20px
+    & .partner-cabinet__service-item
+      margin-bottom: 0
+      background: transparent
+      &:nth-of-type(2n)
+        background: rgba(255, 255, 255, 0.07)
+      .sim
+        display: flex
+        align-items: center
+      & .sim-status
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        &--green
+          background: #8AE245
+        &--red
+          background: #FE186B
+      .gsm
+        display: flex
+        align-items: center
+      & .gsm-status
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background-size: cover
+        &--green
+          background: url(../img/green-arrow.svg) no-repeat center center
+
+        &--red
+          background: url(../img/red-arrow.svg) no-repeat center center
+        &--empty
+          background: none
+      & .work-status
+        width: 36px
+        height: 20px
+        background: #8AE245
+        border-radius: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        & span
+          font-family: 'Poppins'
+          font-style: normal
+          font-weight: 500
+          font-size: 14px
+          line-height: 20px
+          text-align: center
+          color: #FFFFFF
+      & .in-out
+        font-family: 'Poppins'
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        color: #FFFFFF
+        &--red
+          color: #FE186B
+          margin-right: 5px
+        &--green
+          color: #8AE245
+          margin-left: 5px
+      & .activations__progress
+        width: 80px
+        height: 10px
+        background: rgba(255, 255, 255, 0.1)
+        border-radius: 10px
+        position: relative
+        &::before
+          @include defaul-pseudo-element(70%, 10px)
+          background: #8AE245
+          top: 0
+          left: 0
+          border-radius: 10px
+      & .open-more
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        height: 100%
+        &__button
+          width: 20px
+          height: 20px
+          background: none
+          border: none
+          position: relative
+          cursor: pointer
+          &::before
+            @include defaul-pseudo-element(10px, 6px)
+            @include centering-absolute-element()
+            width: 10px
+            height: 6px
+            background: url(../img/open-more.svg) no-repeat center center
+            background-size: cover
 
 .button-controler
   @include button-none
@@ -75,6 +172,12 @@ section
     text-align: center
     color: #FFFFFF
     text-shadow: 0px 1px 2px rgba(196, 7, 75, 0.7)
+
+  &--blue
+    background: linear-gradient(180deg, #84F0FF 0%, #00E0FF 100%)
+    box-shadow: 0px 5px 10px rgba(0, 224, 255, 0.25)
+    color: #090909
+    text-shadow: 0px 1px 2px rgba(0, 194, 255, 0.7)
   &:hover
     box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.6)
     animation: shadow-animation-hover $general-transition-duraction 1 forwards

@@ -96,8 +96,8 @@ const reload = (done) => {
 };
 
 function startwatch() {
-  gulp.watch('app/sass/**/*', gulp.series(styles));
-  gulp.watch(['app/js/**/*.js', '!app/js/**/*.min.js'], gulp.series(scripts));
+  gulp.watch('app/sass/**/*', gulp.series(styles, reload));
+  gulp.watch(['app/js/**/*.js', '!app/js/**/*.min.js'], gulp.series(scripts, reload));
   gulp.watch('app/**/*.html', gulp.series(html, reload));
 }
 
