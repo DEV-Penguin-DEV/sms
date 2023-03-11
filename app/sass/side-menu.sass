@@ -1,0 +1,106 @@
+.side-menu
+    position: relative
+    padding: 18px 40px
+    box-sizing: border-box
+    transition: 0.5s
+    left: 0
+    &::before
+        @include defaul-pseudo-element(1px, 80%)
+        right: 0
+        background: #FFFFFF
+        opacity: 0.1
+        top: 10%
+
+    &--closed
+        left: -300px
+        position: relative
+        transition: 0.5s
+        z-index: 20
+        width: 10px
+        min-width: 0
+        min-height: 100%
+        &::before
+            right: -290px
+        & .side-menu__button
+            right: -300px
+        & + .main-content__wrapper--right
+            max-width: none
+
+.side-menu__button
+    position: absolute
+    width: 20px
+    height: 20px
+    background: #00E0FF
+    @include centering-height-absolute-element()
+    right: -10px
+    border-radius: 50%
+    background: url(../img/side-menu-button.svg) no-repeat center center
+    background-size: cover
+    cursor: pointer
+    transition: 0.5s
+    &--active
+        transition: 0.5s
+        top: calc(50% - 10px)
+        transform: rotate(180deg)
+
+.side-menu__list
+    display: flex
+    flex-direction: column
+    gap: 40px
+
+.side-menu__item
+    padding-left: 45px
+    width: 100%
+    position: relative
+    &--active
+        & .side-menu__link
+            color: #00E0FF
+
+    &::before
+        @include defaul-pseudo-element(25px, 25px)
+        left: 0
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        @include centering-height-absolute-element()
+
+    &--dashboard::before
+        background-image: url("../img/space_dashboard_FILL1_wght700_GRAD200_opsz48 1.svg")
+    &--analytics::before
+        background-image: url("../img/leaderboard_FILL1_wght700_GRAD200_opsz48 1.svg")
+    &--workers::before
+        background-image: url("../img/storage_FILL1_wght700_GRAD200_opsz48 1.svg")
+    &--api-workers::before
+        background-image: url("../img/storage_FILL1_wght700_GRAD200_opsz48 1.svg")
+    &--users::before
+        background-image: url("../img/group_FILL1_wght700_GRAD200_opsz48 1.svg")
+    &--billing::before
+        background-image: url("../img/paid_FILL1_wght700_GRAD200_opsz48 1.svg")
+    &--prices::before
+        background-image: url("../img/sell_FILL1_wght700_GRAD200_opsz48 1.svg")
+    &--support::before
+        background-image: url("../img/contact_support_FILL1_wght700_GRAD200_opsz48 1.svg")
+
+
+.side-menu__item-more
+    right: 0
+    width: 20px
+    border: none
+    height: 20px
+    cursor: pointer
+    position: absolute
+    background-size: cover
+    @include centering-height-absolute-element()
+    background: url(../img/more-button.svg) no-repeat center center
+
+.side-menu__link
+    font-family: 'Kharkiv Tone'
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 35px
+    color: #FFFFFF
+    text-decoration: none
+
+.side-menu__logo
+    margin-bottom: 60px
