@@ -1,0 +1,31 @@
+.more-info
+    height: 0
+    width: 100%
+    opacity: 0
+    transition: 0.7s
+    &--active
+        height: 450px
+        opacity: 1
+        transition: 0.7s
+        padding: 15px
+        padding-top: 30px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .more-info__text-container
+            display: flex
+            flex-direction: column
+            gap: 10px
+            font-family: 'Poppins'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            color: #FFFFFF
+        .more-info__icon-container
+            display: flex
+            flex-direction: column
+            gap: 20px
+        .more-info__icon-list
+            display: flex
+            gap: 15px

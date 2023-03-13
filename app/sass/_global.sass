@@ -58,9 +58,13 @@ section
       background: transparent
       padding-left: 6px
       padding-right: 16px
-      display: grid
-      grid-template-columns: 2% 2.7% 2.7% 2.7% 3.68% 5.52% 12.7% 6.5% 12.7% 3.3% 3.3% 5.26% 5.26% 8.29% 4.27% 1.84%
-      gap: 15px
+      display: flex
+      flex-direction: column
+      &-wrapper
+        display: grid
+        grid-template-columns: 2% 2.7% 2.7% 2.7% 3.68% 5.52% 12.7% 6.5% 12.7% 3.3% 3.3% 5.26% 5.26% 8.29% 4.27% 1.84%
+        gap: 15px
+        width: 100%
       &:nth-of-type(2n)
         background: rgba(255, 255, 255, 0.07)
       .sim
@@ -130,26 +134,27 @@ section
           top: 0
           left: 0
           border-radius: 10px
-      & .open-more
-        display: flex
-        justify-content: center
-        align-items: center
-        cursor: pointer
-        height: 100%
-        &__button
-          width: 20px
-          height: 20px
-          background: none
-          border: none
-          position: relative
-          cursor: pointer
-          &::before
-            @include defaul-pseudo-element(10px, 6px)
-            @include centering-absolute-element()
-            width: 10px
-            height: 6px
-            background: url(../img/open-more.svg) no-repeat center center
-            background-size: cover
+
+.open-more
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  height: 100%
+  &__button
+    width: 20px
+    height: 20px
+    background: none
+    border: none
+    position: relative
+    cursor: pointer
+    &::before
+      @include defaul-pseudo-element(10px, 6px)
+      @include centering-absolute-element()
+      width: 10px
+      height: 6px
+      background: url(../img/open-more.svg) no-repeat center center
+      background-size: cover
 
 .button-controler
   @include button-none

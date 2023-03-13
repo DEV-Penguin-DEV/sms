@@ -102,33 +102,38 @@
     padding-left: 45px
     width: 100%
     position: relative
+    display: flex
+    flex-direction: column
+
+    &-wrapper
+        display: flex
+        position: relative
+        &::before
+            @include defaul-pseudo-element(25px, 25px)
+            left: -45px
+            background-position: center center
+            background-size: cover
+            background-repeat: no-repeat
+            @include centering-height-absolute-element()
     &--active
         & .side-menu__link
             color: #00E0FF
 
-    &::before
-        @include defaul-pseudo-element(25px, 25px)
-        left: 0
-        background-position: center center
-        background-size: cover
-        background-repeat: no-repeat
-        @include centering-height-absolute-element()
-
-    &--dashboard::before
+    &--dashboard.side-menu__item .side-menu__item-wrapper::before
         background-image: url("../img/space_dashboard_FILL1_wght700_GRAD200_opsz48 1.svg")
-    &--analytics::before
+    &--analytics.side-menu__item .side-menu__item-wrapper::before
         background-image: url("../img/leaderboard_FILL1_wght700_GRAD200_opsz48 1.svg")
-    &--workers::before
+    &--workers.side-menu__item .side-menu__item-wrapper::before
         background-image: url("../img/storage_FILL1_wght700_GRAD200_opsz48 1.svg")
-    &--api-workers::before
+    &--api-workers.side-menu__item .side-menu__item-wrapper::before
         background-image: url("../img/storage_FILL1_wght700_GRAD200_opsz48 1.svg")
-    &--users::before
+    &--users.side-menu__item .side-menu__item-wrapper::before
         background-image: url("../img/group_FILL1_wght700_GRAD200_opsz48 1.svg")
-    &--billing::before
+    &--billing.side-menu__item .side-menu__item-wrapper::before
         background-image: url("../img/paid_FILL1_wght700_GRAD200_opsz48 1.svg")
-    &--prices::before
+    &--prices.side-menu__item .side-menu__item-wrapper::before
         background-image: url("../img/sell_FILL1_wght700_GRAD200_opsz48 1.svg")
-    &--support::before
+    &--support.side-menu__item .side-menu__item-wrapper::before
         background-image: url("../img/contact_support_FILL1_wght700_GRAD200_opsz48 1.svg")
 
 .side-menu__item-more
@@ -141,6 +146,10 @@
     background-size: cover
     @include centering-height-absolute-element()
     background: url(../img/more-button.svg) no-repeat center center
+    transition: 0.5s
+    &:hover
+        transition: 0.5s
+        scale: 1.5
 
 .side-menu__link
     font-family: 'Kharkiv Tone'
@@ -150,6 +159,27 @@
     line-height: 35px
     color: #FFFFFF
     text-decoration: none
+    transition: .5s
+    position: relative
+    margin-right: auto
+    &::after
+        @include defaul-pseudo-element(0, 1px)
+        right: 50%
+        background-color: #00E0FF
+        bottom: -4px
+        transition: .5s
+    &:hover
+        color: #00E0FF
+        transition: .5s
+        &::after
+            width: 100%
+            right: 0
+            transition: .5s
 
 .side-menu__logo
     margin-bottom: 60px
+
+.open-more__button
+    &:hover
+        &::before
+            background-image: url(../img/open-more--hover.svg) !important
