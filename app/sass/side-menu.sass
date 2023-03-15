@@ -56,11 +56,6 @@
             transition: 0.5s
         & + .main-content__wrapper--right
             transition: 0.5s
-        @media (max-width: 1250px ) and (min-width: 1201px)
-            & + .main-content__wrapper--right
-                & .partners-worker-cabinet__statistic-title
-                    font-size: 18px
-                    line-height: 22px
         @media (max-width: 1670px )
             & + .main-content__wrapper--right
                 & .partners-worker-cabinet__statistic-title
@@ -70,14 +65,19 @@
         @media (max-width: 1360px )
             & + .main-content__wrapper--right
                 & .partners-worker-cabinet__statistic-title
-                    font-size: 25px
-                    line-height: 30px
+                    font-size: 20px
+                    line-height: 25px
             &::before
                 right: -255px
                 transition: 0.5s
             & .side-menu__button
                 right: -265px
                 transition: 0.5s
+        @media (max-width: 1250px ) and (min-width: 1201px)
+            & + .main-content__wrapper--right
+                & .partners-worker-cabinet__statistic-title
+                    font-size: 18px
+                    line-height: 22px
         @media (max-width: 1250px)
             left: -260px
             &::before
