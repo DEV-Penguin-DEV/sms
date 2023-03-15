@@ -118,7 +118,7 @@ function buildFonts() {
   return gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 }
 
-export const assets = gulp.series(cleanimg, scripts, images);
+export const assets = gulp.series(cleaning, scripts, images);
 export const build = gulp.series(
   cleaning,
   scripts,
