@@ -201,24 +201,6 @@
 
 .partners-worker-cabinet__searching-form
     position: relative
-    &::before
-        @include defaul-pseudo-element(2px, 22px)
-        @include centering-height-absolute-element()
-        background: #00E0FF
-        left: 33px
-    &::after
-        content: "A"
-        position: absolute
-        font-family: 'Neue Machina'
-        font-style: normal
-        font-weight: 500
-        font-size: 18px
-        line-height: 18px
-
-        color: #FFFFFF
-        @include centering-height-absolute-element()
-        top: 57%
-        left: 10px
 
 .partners-worker-cabinet__searching-input
     background: rgba(255, 255, 255, 0.1)
@@ -230,9 +212,10 @@
     font-size: 18px
     line-height: 28px
     position: relative
+    caret-color: #00e0ff
 
     color: #FFFFFF
-    padding: 13px 80px 6px 37px
+    padding: 10px 80px 10px 15px
     box-sizing: border-box
 
 .partners-worker-cabinet__searching-submit
@@ -254,6 +237,7 @@
 .partner-cabinet__table-item
     flex-grow: 1
     width: fit-content !important
+    height: fit-content !important
     &.title
         display: flex
         justify-content: center
