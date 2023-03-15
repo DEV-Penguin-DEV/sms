@@ -3,16 +3,10 @@
     padding: 18px 40px
     box-sizing: border-box
     transition: 0.5s
+    width: 319px
+    transition: 0.5s
     left: 0
     z-index: 99998
-    @media (max-width: 1700px)
-        position: absolute
-        left: 0
-        top: 0
-        background: #090909
-        height: 100%
-        & + .main-content__wrapper--right .header-partner
-            position: relative
     @include tablet
         display: none
     &::before
@@ -22,47 +16,74 @@
         opacity: 0.1
         top: 10%
         transition: 0.5s
+    @media (max-width: 1670px )
+        width: 280px
+        padding: 18px 30px
+        & + .main-content__wrapper--right
+            & .partners-worker-cabinet__statistic-title
+                transition: 0.5s
+                font-size: 22px
+                line-height: 26px
+    @media (max-width: 1360px )
+        & + .main-content__wrapper--right
+            & .partners-worker-cabinet__statistic-title
+                font-size: 18px
+                line-height: 22px
+    @media (max-width: 1250px ) and (min-width: 1201px)
+        width: 245px
+        padding: 18px 20px
+        & + .main-content__wrapper--right
+            & .partners-worker-cabinet__statistic-title
+                font-size: 14px
+                line-height: 20px
+                transition: 0.5s
+            & .partners-worker-cabinet__statistic-icon
+                width: 35px
+                transition: 0.5s
 
     &--closed
-        left: -300px
         position: relative
+        left: -280px
         transition: 0.5s
         width: 10px
         min-width: 0
         min-height: 100%
         &::before
-            right: -290px
+            right: -235px
             transition: 0.5s
         & .side-menu__button
-            right: -300px
+            right: -245px
             transition: 0.5s
         & + .main-content__wrapper--right
             transition: 0.5s
-        @media (max-width: 1700px)
-            min-width: 319px
-            position: absolute
-            left: -280px
+        @media (max-width: 1250px ) and (min-width: 1201px)
+            & + .main-content__wrapper--right
+                & .partners-worker-cabinet__statistic-title
+                    font-size: 18px
+                    line-height: 22px
+        @media (max-width: 1670px )
+            & + .main-content__wrapper--right
+                & .partners-worker-cabinet__statistic-title
+                    transition: 0.5s
+                    font-size: 25px
+                    line-height: 30px
+        @media (max-width: 1360px )
+            & + .main-content__wrapper--right
+                & .partners-worker-cabinet__statistic-title
+                    font-size: 25px
+                    line-height: 30px
             &::before
-                right: 0px
+                right: -255px
                 transition: 0.5s
             & .side-menu__button
-                right: -10px
+                right: -265px
                 transition: 0.5s
-        @media (max-width: 1000px)
-            left: -300px
+        @media (max-width: 1250px)
+            left: -260px
             &::before
-                right: -10px
-                transition: 0.5s
+                right: -245px
             & .side-menu__button
-                right: -20px
-                transition: 0.5s
-        @media (max-width: 700px)
-            &::before
-                right: 0px
-                transition: 0.5s
-            & .side-menu__button
-                right: -10px
-                transition: 0.5s
+                right: -255px
 
 .side-menu__button
     position: absolute
@@ -106,6 +127,7 @@
             @include centering-height-absolute-element()
     &--active
         & .side-menu__link
+            transition: 0.5s
             color: #00E0FF
 
     &--dashboard.side-menu__item .side-menu__item-wrapper::before
@@ -164,6 +186,9 @@
             width: 100%
             right: 0
             transition: .5s
+    @media (max-width: 1360px )
+        font-size: 16px
+        line-height: 30px
 
 .side-menu__logo
     margin-bottom: 60px
@@ -172,3 +197,4 @@
     &:hover
         &::before
             background-image: url(../img/open-more--hover.svg) !important
+            transition: 0.5s

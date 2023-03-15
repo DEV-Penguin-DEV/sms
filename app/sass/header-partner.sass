@@ -1,5 +1,5 @@
 .header-partner
-	position: fixed !important
+	position: sticky !important
 	top: 0
 	z-index: 999
 	padding: 20px 40px 30px
@@ -17,24 +17,21 @@
 	@include tablet
 		padding: 15px 30px
 	&.hide
-		background: rgba(0, 0, 0, 0.6)
-		transition: 0.5s
+		transform: none
 	&__logo
 		font-weight: 900
 		font-family: "Neue Machina"
 		font-size: 20px
 		color: $white
 	&--pw
-		width: 100%
-		&__inner-wrapper
-			width: 95%
-			margin: 0 auto
-			padding-right: 0
-			padding-left: 0
-			display: flex
-			flex-flow: wrap
-			align-items: center
-			justify-content: space-between
+		width: 95%
+		margin: 0 auto
+		padding-right: 0
+		padding-left: 0
+		display: flex
+		flex-flow: wrap
+		align-items: center
+		justify-content: space-between
 	.header__logo
 		&--pw
 			font-family: 'Neue Machina'

@@ -101,8 +101,11 @@
     gap: 20px
     align-items: center
     height: 85px
+    @media (max-width: 1790px)
+        padding-left: 10px
+        gap: 15px
     @include laptop1480
-        padding: 15px 15px 10px 15px
+        padding: 15px 10px 10px 10px
     @include laptop1270
         padding: 10px
         height: 75px
@@ -121,7 +124,7 @@
             line-height: 25px
             text-transform: uppercase
             color: #FFFFFF
-            @include laptop1580
+            @media (max-width: 1660px)
                 font-size: 10px
                 line-height: 20px
             @include laptop1480
@@ -134,7 +137,7 @@
             font-weight: 600
             font-size: 30px
             line-height: 35px
-            @include laptop1580
+            @media (max-width: 1920px)
                 font-size: 25px
                 line-height: 30px
             @include laptop1480
@@ -193,9 +196,13 @@
     border-radius: 20px
     cursor: pointer
     text-align: center
+    transition: 0.7s
     &--active
         background: #00E0FF
         color: #090909
+    &:hover:not(&--active)
+        background: rgba(0, 224, 255, 0.6)
+        transition: 0.7s
     @media (max-width: 943px)
         flex-grow: 1
 
@@ -241,6 +248,13 @@
     &.title
         display: flex
         justify-content: center
+        @media (max-width: 2000px)
+            font-size: 12px
+            line-height: 16px
+    &.text
+        @media (max-width: 2000px)
+            font-size: 14px
+            line-height: 18px
 
 .partner-cabinet__table-item__checkbox-input
     display: none
