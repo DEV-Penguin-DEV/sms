@@ -122,14 +122,11 @@ export const assets = gulp.series(cleaning, scripts, images);
 export const build = gulp.series(
   cleaning,
   scripts,
+  html,
   imagesProduct,
   styles,
   stylesCss,
-  buildJs,
-  buildImg,
-  buildMp3,
   buildFonts,
-  buildHtml
 );
 export default gulp.series(
   cleaning,
