@@ -1,16 +1,15 @@
 .more-info
-    height: 0
     width: 100%
     opacity: 0
-    display: none
     transition: 0.7s
+    animation: more-info--out 0.7s forwards
     &--active
-        height: 450px
+        animation: more-info 0.7s forwards
+        height: 0
         opacity: 1
         transition: 0.7s
         padding: 15px
         padding-top: 30px
-        display: flex
         flex-direction: column
         justify-content: space-between
         .more-info__text-container
@@ -30,3 +29,15 @@
         .more-info__icon-list
             display: flex
             gap: 15px
+
+@keyframes more-info
+    from
+        height: 0
+    to
+        height: 450px
+
+@keyframes more-info--out
+    from
+        height: 450px
+    to
+        height: 0

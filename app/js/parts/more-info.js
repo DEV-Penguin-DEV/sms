@@ -8,8 +8,21 @@ const findAncestor = (el, cls) => {
 const openMoreButtons = document.querySelectorAll('.open-more__button');
 
 openMoreButtons.forEach((openMoreButton) => {
-    openMoreButton.addEventListener('click', () => {
-        const moreInfoContainer = findAncestor(openMoreButton, 'partner-cabinet__service-item').querySelector('.more-info');
-        moreInfoContainer.classList.toggle('more-info--active');
-    })
+  const moreInfoContainer = findAncestor(openMoreButton, 'partner-cabinet__service-item').querySelector('.more-info');
+  moreInfoContainer.style.display = 'none';
+
+  openMoreButton.addEventListener('click', () => {
+    if (moreInfoContainer.classList.contains('more-info--active')) {
+      setTimeout(() => {
+        moreInfoContainer.style.display = 'none';
+      }, 1000)
+    } else {
+
+      moreInfoContainer.style.display = 'flex';
+
+    }
+    moreInfoContainer.classList.toggle('more-info--active');
+
+
+  })
 })
