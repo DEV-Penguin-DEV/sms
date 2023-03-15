@@ -69,7 +69,7 @@ function imagesProduct() {
     .pipe(gulp.dest('dist/img/'));
 }
 
-function cleanimg() {
+function cleaning() {
   return del('dist/', { force: true });
 }
 
@@ -120,7 +120,7 @@ function buildFonts() {
 
 export const assets = gulp.series(cleanimg, scripts, images);
 export const build = gulp.series(
-  cleanimg,
+  cleaning,
   scripts,
   imagesProduct,
   styles,
@@ -132,7 +132,7 @@ export const build = gulp.series(
   buildHtml
 );
 export default gulp.series(
-  cleanimg,
+  cleaning,
   scripts,
   html,
   images,
