@@ -15,7 +15,7 @@
 .partners-worker-cabinet__top-part
     display: flex
     justify-content: space-between
-    @media (max-width: 681px)
+    @media (max-width: 743px)
         flex-wrap: wrap
         gap: 15px 0
 
@@ -24,6 +24,13 @@
         min-width: 100%
 
 .partners-worker-cabinet__button-controler
+    display: flex
+    align-items: flex-start
+    @media (max-width: 506px)
+        display: grid !important
+        grid-template-columns: 1fr 1fr
+        gap: 10px !important
+        align-items: flex-start
 
     &--power
         box-shadow: 0px 10px 20px rgba(254, 24, 107, 0.25)
@@ -61,6 +68,30 @@
             flex-grow: 1
             padding-top: 15px
             padding-bottom: 15px
+        &-container
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            gap: 10px
+    &--guide
+        background-color: #ffffff
+        color: #000000
+        padding: 7px 15px !important
+    &--left
+        display: grid !important
+        grid-template-columns: 1fr
+        gap: 10px !important
+    &-container
+        display: flex
+        gap: 10px
+    &--start
+        background-color: #8AE245
+        color: #ffffff
+        width: 100%
+        transition: 0.5s
+        &-stop
+            background-color: #FE186B
+            transition: 0.5s
 
 .partners-worker-cabinet__button-controler
     display: flex
