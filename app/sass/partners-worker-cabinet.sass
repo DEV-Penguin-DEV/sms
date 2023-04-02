@@ -269,8 +269,15 @@
         display: grid
         grid-template-columns: 2% 2.7% 2.7% 2.7% 3.68% 5.52% 12.7% 6.5% 12.7% 3.3% 3.3% 5.26% 5.26% 8.29% 4.27% 1.84%
         gap: 15px
-        min-width: 1378px
+        width: 100%
         box-sizing: border-box
+        @media (max-width: 1430px)
+            gap: 13px
+        @media (max-width: 1275px)
+            gap: 12px 
+        @media (max-width: 1000px)
+            min-width: 1378px
+        
 
 .partner-cabinet__table-item
     flex-grow: 1
@@ -282,10 +289,22 @@
         @media (max-width: 2000px)
             font-size: 12px
             line-height: 16px
+        @media (max-width: 1430px)
+            font-size: 11px
+            line-height: 12px
+        @media (max-width: 1395px)
+            font-size: 10px
+            line-height: 10px
     &.text
         @media (max-width: 2000px)
             font-size: 14px
             line-height: 18px
+        @media (max-width: 1430px)
+            font-size: 12px
+            line-height: 16px
+        @media (max-width: 1338px)
+            font-size: 11px
+            line-height: 14px
 
 .partner-cabinet__table-item__checkbox-input
     display: none
@@ -310,7 +329,8 @@
         justify-self: center
 
 .partners-worker-cabinet__service-table
-    overflow-x: scroll
+    @media (max-width: 1000px)
+        overflow-x: scroll
     &::-webkit-scrollbar
         height: 8px
         background-color: #f9f9fd
@@ -320,8 +340,13 @@
     & .partner-cabinet__service-table-body
         overflow: visible
         overflow-y: scroll
-        min-width: 1378px
         box-sizing: border-box
+        width: 100%
+        @media (max-width: 1430px)
+            overflow-x: hidden
+        @media (max-width: 1000px)
+            min-width: 1378px
+        
 
 .partners-worker-cabinet__service-top-container__mobile-wrapper
     display: flex

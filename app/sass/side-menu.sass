@@ -3,7 +3,8 @@
     padding: 18px 40px
     box-sizing: border-box
     transition: 0.5s
-    width: 319px
+    max-width: 20vw
+    width: fit-content
     transition: 0.5s
     left: 0
     z-index: 99998
@@ -17,20 +18,21 @@
         top: 10%
         transition: 0.5s
     @media (max-width: 1670px )
-        width: 280px
-        padding: 18px 30px
+        padding: 18px 20px
         & + .main-content__wrapper--right
             & .partners-worker-cabinet__statistic-title
                 transition: 0.5s
                 font-size: 22px
                 line-height: 26px
+    @media (max-width: 1430px )
+        padding: 18px 15px
     @media (max-width: 1360px )
+        padding: 18px 15px
         & + .main-content__wrapper--right
             & .partners-worker-cabinet__statistic-title
                 font-size: 18px
                 line-height: 22px
     @media (max-width: 1250px ) and (min-width: 1201px)
-        width: 245px
         padding: 18px 20px
         & + .main-content__wrapper--right
             & .partners-worker-cabinet__statistic-title
@@ -43,17 +45,20 @@
 
     &--closed
         position: relative
-        left: -280px
+        left: 0px
         transition: 0.5s
         width: 10px
-        min-width: 0
+        max-width: 0
         min-height: 100%
         &::before
-            right: -235px
+            right: 0px
             transition: 0.5s
+        & .side-menu__link
+            display: none
         & .side-menu__button
-            right: -245px
             transition: 0.5s
+        & .side-menu__item-more
+            display: none
         & + .main-content__wrapper--right
             transition: 0.5s
         @media (max-width: 1670px )
@@ -67,23 +72,11 @@
                 & .partners-worker-cabinet__statistic-title
                     font-size: 20px
                     line-height: 25px
-            &::before
-                right: -255px
-                transition: 0.5s
-            & .side-menu__button
-                right: -265px
-                transition: 0.5s
         @media (max-width: 1250px ) and (min-width: 1201px)
             & + .main-content__wrapper--right
                 & .partners-worker-cabinet__statistic-title
                     font-size: 18px
                     line-height: 22px
-        @media (max-width: 1250px)
-            left: -260px
-            &::before
-                right: -245px
-            & .side-menu__button
-                right: -255px
 
 .side-menu__button
     position: absolute
@@ -115,16 +108,24 @@
     display: flex
     flex-direction: column
 
+    @media(max-width: 1600px)
+        padding-left: 30px
+    @media(max-width: 1441px)
+        padding-left: 25px
+
     &-wrapper
         display: flex
         position: relative
         &::before
             @include defaul-pseudo-element(25px, 25px)
-            left: -45px
+            left: -35px
             background-position: center center
             background-size: cover
             background-repeat: no-repeat
             @include centering-height-absolute-element()
+            @media(max-width: 1430px)
+                left: -30px
+
     &--active
         & .side-menu__link
             transition: 0.5s
@@ -186,12 +187,19 @@
             width: 100%
             right: 0
             transition: .5s
-    @media (max-width: 1360px )
+    @media (max-width: 1600px )
         font-size: 16px
         line-height: 30px
+    @media (max-width: 1491px )
+        font-size: 12px
+        line-height: 25px
+    @media (max-width: 1360px )
+        font-size: 12px
+        line-height: 25px
 
 .side-menu__logo
     margin-bottom: 60px
+    width: 100%
 
 .open-more__button
     &:hover
