@@ -53,7 +53,6 @@
         position: relative
         left: 0px
         transition: 0.5s
-        width: 10px
         max-width: 0
         min-height: 100%
         &::before
@@ -201,6 +200,22 @@
         font-size: 18px
         line-height: 35px
 
+@keyframes link-in--1600
+    0%
+        font-size: 0px
+        line-height: 0px
+    100%
+        font-size: 16px
+        line-height: 30px
+
+@keyframes link-in--1491
+    0%
+        font-size: 0px
+        line-height: 0px
+    100%
+        font-size: 12px
+        line-height: 25px
+
 .side-menu__link
     font-family: 'Kharkiv Tone'
     font-style: normal
@@ -225,14 +240,9 @@
             right: 0
             transition: .5s
     @media (max-width: 1600px )
-        font-size: 16px
-        line-height: 30px
+        animation: link-in--1600 0.27s forwards
     @media (max-width: 1491px )
-        font-size: 12px
-        line-height: 25px
-    @media (max-width: 1360px )
-        font-size: 12px
-        line-height: 25px
+        animation: link-in--1491 0.27s forwards
 
 .side-menu__logo
     margin-bottom: 60px
