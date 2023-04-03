@@ -19,6 +19,8 @@
         transition: 0.5s
     @media (max-width: 1670px )
         padding: 18px 20px
+        &--closed
+            padding: 18px 30px
         & + .main-content__wrapper--right
             & .partners-worker-cabinet__statistic-title
                 transition: 0.5s
@@ -26,8 +28,12 @@
                 line-height: 26px
     @media (max-width: 1430px )
         padding: 18px 15px
+        &--closed
+            padding: 18px 25px
     @media (max-width: 1360px )
         padding: 18px 15px
+        &--closed
+            padding: 18px 25px
         & + .main-content__wrapper--right
             & .partners-worker-cabinet__statistic-title
                 font-size: 18px
@@ -54,13 +60,26 @@
             right: 0px
             transition: 0.5s
         & .side-menu__link
-            display: none
+            animation: link-out 0.27s forwards
+            transition: 0.5s
         & .side-menu__button
             transition: 0.5s
         & .side-menu__item-more
             display: none
+            transition: 0.5s
         & + .main-content__wrapper--right
             transition: 0.5s
+        & .side-menu__item
+            width: 35px
+            height: 35px
+            left: -25px
+            transition: 0.5s
+            &-wrapper
+                &::before
+                    @media(max-width: 1600px)
+                        left: -25px
+                    @media(max-width: 1440px)
+                        left: -15px
         @media (max-width: 1670px )
             & + .main-content__wrapper--right
                 & .partners-worker-cabinet__statistic-title
@@ -77,6 +96,14 @@
                 & .partners-worker-cabinet__statistic-title
                     font-size: 18px
                     line-height: 22px
+
+@keyframes link-out
+    30%
+        font-size: 9px
+        line-height: 14px
+    100%
+        font-size: 0px
+        line-height: 0px
 
 .side-menu__button
     position: absolute
@@ -107,6 +134,7 @@
     position: relative
     display: flex
     flex-direction: column
+    transition: 0.5s
 
     @media(max-width: 1600px)
         padding-left: 30px
@@ -121,8 +149,10 @@
             left: -35px
             background-position: center center
             background-size: cover
+            transition: 0.5s
             background-repeat: no-repeat
             @include centering-height-absolute-element()
+            cursor: pointer
             @media(max-width: 1430px)
                 left: -30px
 
@@ -163,17 +193,24 @@
         transition: 0.5s
         scale: 1.5
 
+@keyframes link-in
+    0%
+        font-size: 0px
+        line-height: 0px
+    100%
+        font-size: 18px
+        line-height: 35px
+
 .side-menu__link
     font-family: 'Kharkiv Tone'
     font-style: normal
     font-weight: 400
-    font-size: 18px
-    line-height: 35px
     color: #FFFFFF
     text-decoration: none
     transition: .5s
     position: relative
     margin-right: auto
+    animation: link-in 0.27s forwards
     &::after
         @include defaul-pseudo-element(0, 1px)
         right: 50%
@@ -200,6 +237,7 @@
 .side-menu__logo
     margin-bottom: 60px
     width: 100%
+    transition: .5s
 
 .open-more__button
     &:hover
