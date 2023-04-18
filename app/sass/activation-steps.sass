@@ -1,0 +1,271 @@
+.activation-steps
+    background: linear-gradient(180deg, rgba(0, 87, 168, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #090909
+    background-image: url('../img/activation-steps-bg.png')
+    padding: 275px 0 291px
+    color: #ffffff
+    font-family: 'Kharkiv Tone'
+    font-style: normal
+    font-weight: 400
+    background-size: cover
+    padding-left: 22.75vw
+    @media (max-width: 1554px)
+        padding-left: 18vw
+    @media (max-width: 1470px)
+        padding-left: 14vw
+    @media (max-width: 1070px)
+        padding: 233px 0 247px
+        padding-left: 11.5vw
+    @media (max-width: 950px)
+        padding-left: 8.5vw
+    @media (max-width: 675px)
+        padding: 178px 0 177px
+        padding-left: 10.5vw
+    @media (max-width: 570px)
+        padding: 151px 0 150px
+        padding-left: 10.5vw
+    @media (max-width: 570px)
+        padding-left: 8.5vw
+
+.activation-steps__info
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) -6.3%, rgba(0, 127, 146, 0.2) 105.22%), rgba(9, 9, 9, 0.05)
+    backdrop-filter: blur(7.5px)
+    border-radius: 50%
+    display: flex
+    align-items: center
+    text-align: center
+    justify-content: center
+    flex-direction: column
+    width: 492px
+    height: 492px
+    gap: 35px
+    position: relative
+    &::before
+        @include defaul-pseudo-element(341px, 594px)
+        background: url(../img/activation-border.svg) no-repeat center center
+        background-size: contain
+        right: -95px
+    @media (max-width: 1470px)
+        width: 422px
+        height: 422px
+        &::before
+            width: 292px
+            height: 509px
+            right: -80px
+    @media (max-width: 1175px)
+        width: 380px
+        height: 380px
+        &::before
+            width: 262px
+            height: 458px
+            right: -70px
+    @media (max-width: 1070px)
+        width: 342px
+        height: 342px
+        &::before
+            width: 235px
+            height: 412px
+            right: -63px
+    @media (max-width: 880px)
+        width: 310px
+        height: 310px
+        gap: 30px
+        &::before
+            width: 211.5px
+            height: 370px
+            right: -56.7px
+    @media (max-width: 790px)
+        width: 260px
+        height: 260px
+        gap: 25px
+        &::before
+            width: 180px
+            height: 315px
+            right: -48px
+    @media (max-width: 675px)
+        width: 208px
+        height: 208px
+        gap: 20px
+        &::before
+            width: 144px
+            height: 252px
+            right: -38px
+    @media (max-width: 570px)
+        width: 185px
+        height: 185px
+        &::before
+            width: 130px
+            height: 225px
+            right: -34px
+
+.activation-steps__text
+    font-family: 'Kharkiv Tone'
+    font-style: normal
+    font-weight: 400
+    font-size: 1vw
+    line-height: 166%
+    display: flex
+    align-items: center
+    text-align: center
+    color: #FFFFFF
+    max-width: 72%
+    @media (max-width: 1175px)
+        font-size: 1.25vw
+    @media (max-width: 790px)
+        font-size: 1.1vw
+    @media (max-width: 675px)
+        font-size: 1vw
+    @media (max-width: 570px)
+        font-size: 1.1vw
+    &--litle
+        font-family: 'Poppins'
+        font-style: normal
+        font-weight: 400
+        font-size: 1.1vw
+        line-height: 110%
+        opacity: 0.6
+        max-width: 72%
+        @media (max-width: 1175px)
+            font-size: 1.35vw
+        @media (max-width: 790px)
+            font-size: 1.2vw
+
+.activation-steps__title
+    font-family: 'Kharkiv Tone'
+    font-style: normal
+    font-weight: 400
+    font-size: 3vw
+    line-height: 114%
+    max-width: 72%
+    @media (max-width: 1175px)
+        font-size: 3.3vw
+    @media (max-width: 790px)
+        font-size: 3.1vw
+    @media (max-width: 675px)
+        font-size: 3vw
+    @media (max-width: 570px)
+        font-size: 3.1vw
+
+.activation-steps__blue
+    font-family: 'Poppins'
+    font-style: normal
+    font-weight: 400
+    font-size: 0.9vw
+    line-height: 137%
+
+    color: #00E0FF
+
+.activation-steps__list
+    position: absolute
+    display: flex
+    flex-direction: column
+    gap: 34px
+    right: -600px
+    @media (max-width: 1370px)
+        right: -520px
+    @media (max-width: 1175px)
+        right: -470px
+        gap: 28px
+    @media (max-width: 1070px)
+        right: -435px
+    @media (max-width: 880px)
+        right: -380px
+    @media (max-width: 790px)
+        gap: 22px
+        right: -315px
+    @media (max-width: 675px)
+        gap: 17px
+        right: -280px
+    @media (max-width: 570px)
+        gap: 17px
+        right: -240px
+
+.activation-step
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) -6.3%, rgba(0, 127, 146, 0.15) 105.22%), rgba(9, 9, 9, 0.05)
+    backdrop-filter: blur(10px)
+    padding: 33px 0
+    padding-left: 46px
+    width: 480px
+    box-sizing: border-box
+    display: flex
+    gap: 35px
+    align-items: center
+    &:last-of-type
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) -51.24%, rgba(63, 166, 0, 0.2) 100%), rgba(9, 9, 9, 0.4)
+        backdrop-filter: blur(25px)
+        border-radius: 100px 0px 0px 100px
+        color: #9CC200
+    &:nth-of-type(2n)
+        margin-left: 80px
+        @media (max-width: 880px)
+            margin-left: 64px
+        @media (max-width: 790px)
+            margin-left: 54px
+        @media (max-width: 675px)
+            margin-left: 43px
+        @media (max-width: 570px)
+            margin-left: 36px
+
+    &:nth-of-type(3)
+        margin-left: 137px
+        @media (max-width: 880px)
+            margin-left: 109px
+        @media (max-width: 790px)
+            margin-left: 92px
+        @media (max-width: 675px)
+            margin-left: 73px
+        @media (max-width: 570px)
+            margin-left: 62px
+
+    @media (max-width: 1370px)
+        width: 400px
+    @media (max-width: 1175px)
+        width: 360px
+        padding: 25px 0
+        padding-left: 40px
+        gap: 25px
+    @media (max-width: 1070px)
+        width: 320px
+        padding: 20px 0
+        padding-left: 30px
+        gap: 20px
+    @media (max-width: 880px)
+        width: 280px
+        padding-left: 25px
+    @media (max-width: 790px)
+        width: 240px
+        padding: 15px 0
+        padding-left: 20px
+    @media (max-width: 675px)
+        width: 220px
+    @media (max-width: 570px)
+        width: 190px
+        gap: 15px
+        padding: 10px 0
+        padding-left: 15px
+
+.activation-step__text
+    max-width: 66.7%
+    font-family: 'Kharkiv Tone'
+    font-style: normal
+    font-weight: 400
+    font-size: 1vw
+    line-height: 158%
+    text-align: left
+    @media (max-width: 1070px)
+        max-width: 76.7%
+    @media (max-width: 880px)
+        max-width: 70.7%
+    @media (max-width: 790px)
+        max-width: 80.7%
+    @media (max-width: 675px)
+        max-width: 77%
+
+.activation-step__number
+    @media (max-width: 1175px)
+        height: 40px
+    @media (max-width: 1070px)
+        height: 35px
+    @media (max-width: 880px)
+        height: 30px
+    @media (max-width: 675px)
+        height: 20px

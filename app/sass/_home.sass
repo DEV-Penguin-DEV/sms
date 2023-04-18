@@ -526,15 +526,17 @@ body>span.select2-container.select2-container--default.select2-container--open.o
       display: inline-block !important
 
 .activation
+  background: linear-gradient(180deg, rgba(0, 87, 168, 0.1) 0%, rgba(0, 0, 0, 0) 100%), #090909
   position: relative
   overflow: hidden
-  padding: 276px 0 233px
+  padding: 276px 0 375px
   @include tablet
     padding-top: 136px
   >img
     position: absolute
     right: 0
     top: 0
+    opacity: 0.5
     @include laptop
       right: -200px
     @include tablet
@@ -566,6 +568,7 @@ body>span.select2-container.select2-container--default.select2-container--open.o
         right: -20px
   &__earth
     width: 100%
+    right: 9% !important
     object-fit: contain
     padding-right: 10px
     max-width: 523px
@@ -590,10 +593,14 @@ body>span.select2-container.select2-container--default.select2-container--open.o
       @include h2
       margin-bottom: 30px
       transition-delay: .1s
+      color: #FFFFFF
+
     p
       @include p0
       margin-bottom: 40px
       transition-delay: .2s
+      color: #FFFFFF
+
     a
       transition: opacity .7s linear, transform .7s linear, filter .5s linear !important
       color: $black
@@ -602,9 +609,13 @@ body>span.select2-container.select2-container--default.select2-container--open.o
       &:hover
         transition-delay: 0s !important
 
+.activation__question
+  top: -350px !important
+
 .advantage
   background: #090909
   position: relative
+  padding-bottom: 100px
   &__nav, &__nav-2
     display: none
     @include tablet

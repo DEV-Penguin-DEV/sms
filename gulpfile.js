@@ -96,24 +96,11 @@ const reload = (done) => {
 };
 
 function startwatch() {
-  gulp.watch('app/sass/**/*', gulp.series(styles, reload));
+  gulp.watch('app/sass/**/*.sass', gulp.series(styles, reload));
   gulp.watch(['app/js/**/*.js', '!app/js/**/*.min.js'], gulp.series(scripts, reload));
   gulp.watch('app/**/*.html', gulp.series(html, reload));
 }
 
-function buildHtml() {
-  return gulp.src('app/*.html')
-    .pipe(gulp.dest('dist'));
-}
-function buildJs() {
-  return gulp.src('app/js/app.min.js').pipe(gulp.dest('dist/js'));
-}
-function buildImg() {
-  return gulp.src('app/img/**/*').pipe(gulp.dest('dist/img'));
-}
-function buildMp3() {
-  return gulp.src('app/mp3/**/*').pipe(gulp.dest('dist/mp3'));
-}
 function buildFonts() {
   return gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 }
