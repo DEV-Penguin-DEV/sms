@@ -1,0 +1,193 @@
+.text-page__header
+    background: none
+
+.text-page
+    background: #090909
+    padding: 0 7vw
+    z-index: 1
+    position: relative
+    padding-top: 240px
+    &::before
+        @include defaul-pseudo-element(100%, 40vh)
+        top: 0
+        left: 0
+        background: linear-gradient(180deg, rgba(0, 87, 168, 0.4) 0%, rgba(0, 0, 0, 0) 100%), #090909 url(../img/text-page-header-bg.png) no-repeat top center
+        background-size: cover
+        z-index: -1
+
+.text-page__container
+    margin: 0 auto
+    width: 71vw
+
+.text-page__text
+    font-family: 'Poppins'
+    font-style: normal
+    font-weight: 400
+    font-size: 20px
+    line-height: 35px
+    position: relative
+
+    color: #FFFFFF
+
+    opacity: 0.7
+    z-index: 1
+
+    &--side
+        font-family: 'Kharkiv Tone'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 167%
+        color: #FFFFFF
+        opacity: 1
+    &--1
+        margin-bottom: 122px
+
+.text-page__title
+    font-family: 'Kharkiv Tone'
+    font-style: normal
+    font-weight: 400
+    color: #FFFFFF
+    &--h1
+        font-size: 60px
+        line-height: 133%
+        margin-bottom: 20px
+    &--h2
+        font-size: 45px
+        line-height: 122%
+        margin-bottom: 25px
+    &--h3
+        font-size: 30px
+        line-height: 117%
+        margin-bottom: 40px
+    &--h4
+        font-size: 30px
+        line-height: 117%
+        color: #00E0FF
+        margin-bottom: 45px
+
+.side-article__title
+    font-family: 'Neue Machina'
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+    line-height: 150%
+
+    text-transform: uppercase
+
+    color: #FFFFFF
+    margin-bottom: 25px
+
+.page-way
+    display: flex
+    gap: 60px
+    margin-bottom: 63px
+
+.page-way__text
+    font-family: 'Kharkiv Tone'
+    font-style: normal
+    font-weight: 400
+    font-size: 20px
+    line-height: 175%
+
+    color: #FFFFFF
+    position: relative
+    &::before
+        @include defaul-pseudo-element(6px, 5px)
+        background: url('../img/arrow_navigation.svg') no-repeat center center
+        background-size: cover
+        @include centering-height-absolute-element()
+        right: -26px
+    &--active
+        opacity: 0.5
+        &::before
+            content: none
+
+.text-page__row
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+    &--2
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 7%
+        margin-bottom: 110px
+    &--1-2
+        display: grid
+        grid-template-columns: 1fr 2fr
+        gap: 7.15%
+        margin-bottom: 90px
+    &--3
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 7.15%
+        margin-bottom: 90px
+    &--lists
+        display: grid
+        grid-template: 1fr 1fr 1fr
+        gap: 5.9%
+        margin-bottom: 120px
+        grid-template-areas: 'row-title row-title side-article' 'list-number list-unnumber side-article'
+    & .text-page__img
+        width: 100%
+        height: auto
+
+.text-page__row-title
+    font-family: 'Kharkiv Tone'
+    font-style: normal
+    font-weight: 400
+    font-size: 30px
+    line-height: 117%
+
+    color: #00E0FF
+    margin-bottom: 45px
+    grid-area: row-title
+
+.text-page__list
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding-left: 34px
+
+.text-page__number-list
+    margin: 0
+    width: 100%
+    grid-area: list-number
+    counter-reset: number-list-counter
+    & .text-page__list-item
+        position: relative
+        counter-increment: number-list-counter
+        &::before
+            content: counter(number-list-counter)
+            position: absolute
+            left: -34px
+            @include centering-height-absolute-element()
+            font-family: 'Kharkiv Tone'
+            font-style: normal
+            font-weight: 400
+            font-size: 20px
+            color: #00E0FF
+.text-page__unnumber-list
+    width: 100%
+    grid-area: list-unnumber
+    & .text-page__list-item
+        position: relative
+        &::before
+            @include defaul-pseudo-element(12px)
+            left: -27px
+            background: #00E0FF
+            border-radius: 50%
+            @include centering-height-absolute-element()
+.side-article
+    grid-area: side-article
+
+.side-article__text
+    font-family: 'Poppins'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 150%
+    color: #FFFFFF
+
+    opacity: 0.7

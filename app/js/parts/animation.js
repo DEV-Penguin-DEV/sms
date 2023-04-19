@@ -1,4 +1,7 @@
 const Visible = function (target) {
+    if (target == null | target == undefined) {
+        return;
+    }
     // Все позиции элемента
     const targetPosition = {
         top: window.pageYOffset + target.getBoundingClientRect().top,

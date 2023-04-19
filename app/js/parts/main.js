@@ -186,8 +186,7 @@ $(document).ready(function () {
         }
 
 
-
-        if (current < 950) {
+        if (current < lastScrollTop) {
             $('header').removeClass('hide');
         }
         else {
