@@ -24,8 +24,8 @@ function scripts() {
   return (
     gulp
       .src([
-        'app/js/parts/main.js', 
-        'app/js/parts/*', 
+        'app/js/parts/main.js',
+        'app/js/parts/*',
       ])
       .pipe(concat('app.min.js'))
       .pipe(gulp.dest('dist/js'))
@@ -52,7 +52,7 @@ function stylesCss() {
 
 function html() {
   return gulp
-    .src('app/*.html')
+    .src('app/*.{html,ico}')
     .pipe(gulp.dest('dist/'));
 }
 
@@ -80,7 +80,7 @@ function deploy() {
       hostname: 'username@yousite.com',
       destination: 'yousite/public_html/',
       include: [
-      ], 
+      ],
       exclude: ['**/Thumbs.db', '**/*.DS_Store'],
       recursive: true,
       archive: true,
