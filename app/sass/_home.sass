@@ -531,7 +531,10 @@ body>span.select2-container.select2-container--default.select2-container--open.o
   overflow: hidden
   padding: 276px 0 375px
   @include tablet
-    padding-top: 136px
+    padding-top: 480px
+    padding-bottom: 215px !important
+  @media(max-width: 500px)
+    padding-top: 80vw
   >img
     position: absolute
     right: 0
@@ -558,14 +561,8 @@ body>span.select2-container.select2-container--default.select2-container--open.o
     img,
     &:last-child
       position: absolute
-      right: -50px
-      top: -166px
       @include tablet
-        width: 158px
-        height: 192px
         object-fit: contain
-        top: -70px
-        right: -20px
   &__earth
     width: 100%
     right: 9% !important
@@ -574,14 +571,21 @@ body>span.select2-container.select2-container--default.select2-container--open.o
     max-width: 523px
     max-height: 583px
     margin-right: auto
+    top: -260px
     margin-left: auto
     @include tablet
       max-width: 350px
       max-height: 385px
+      width: 70vw
+      height: 70vw
       padding: 0
       margin: auto
       left: -20px
+      right: -50px
+      top: -360px
       position: relative
+    @media(max-width: 500px)
+      top: -68vw
   &__right
     max-width: 51%
     width: 100%
@@ -610,7 +614,18 @@ body>span.select2-container.select2-container--default.select2-container--open.o
         transition-delay: 0s !important
 
 .activation__question
-  top: -350px !important
+  top: -440px
+  left: 50%
+  height: auto
+  @include tablet
+    width: 30vw
+    max-width: 190px
+    top: -450px
+    right: 35%
+  @media(max-width: 1000px)
+    right: 27%
+  @media(max-width: 500px)
+    top: -73vw
 
 .advantage
   background: #090909
