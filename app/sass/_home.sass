@@ -1,3 +1,5 @@
+html
+  background-color: #000000 !important
 .intro
   //min-height: 100vh
   min-height: 1080px
@@ -245,6 +247,7 @@
     @include tablet
       margin-top: 10px
       max-height: 55vh
+      padding-right: 0
     @include tabletL
       padding-right: 50px
     @include mobile
@@ -254,6 +257,8 @@
       width: 5px
       border-radius: 10px
       background-color: rgba(255,255,255, .1)
+      @include tablet
+        display: none
     &::-webkit-scrollbar-thumb
       border-radius: 10px
       background-color: $blue
@@ -267,7 +272,10 @@
       padding-top: 40px
       border-top: 1px solid rgba(255,255,255,.1)
       @include tablet
-        margin-top: 10px
+        width: 100%
+        margin-left: 0px
+        padding-left: 0px
+        padding-right: 0px
     &--main
       @include onlyNotebook
         max-height: 380px
