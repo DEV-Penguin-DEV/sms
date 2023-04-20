@@ -8,7 +8,6 @@
         border-radius: 10px
         display: flex
         flex-flow: column nowrap
-        padding-bottom: 30px
         overflow: hidden
         @media (max-width: 450px) and (min-height: 890px)
             height: 90vh
@@ -223,14 +222,17 @@
                         margin-bottom: 20px
 
     &__service-wrapper
-        width: 100%
-        overflow-x: hidden
-        overflow-y: hidden
+        overflow-x: scroll
+        overflow-y: scroll
+
         &::-webkit-scrollbar
-            display: none
+            height: 8px
+            width: 8px
+            background-color: #f9f9fd
+        &::-webkit-scrollbar-thumb
+            background-color: #223c50
 
     &__service-table
-        padding: 0 40px
         @include tablet
             min-width: 1080px
 

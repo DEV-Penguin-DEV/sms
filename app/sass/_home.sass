@@ -851,3 +851,65 @@ body>span.select2-container.select2-container--default.select2-container--open.o
     opacity: 0
   to
     opacity: 1
+
+.main-footer__author
+  font-family: 'Kharkiv Tone'
+  font-style: normal
+  font-weight: 400
+  @include p3
+  line-height: 150%
+  color: #FFFFFF
+  width: fit-content
+  margin: 0 auto
+
+  @media(max-width: 1200px)
+    @include p2
+  @media(max-width: 460px)
+    @include p3
+
+  &-link
+    @include p3
+    margin-left: 10px
+    color: #fdcd24
+    text-decoration: none
+    cursor: pointer
+    display: inline-block
+    height: 100%
+    transition: 0.85s
+
+    @media(max-width: 1200px)
+      @include p2
+      color: #fdcd24
+    @media(max-width: 460px)
+      @include p3
+      color: #fdcd24
+
+    &::before
+      @include defaul-pseudo-element(0px, 3px)
+      bottom: -5px
+      left: 50%
+      background-color: #fdcd24
+      transition: 0.85s
+
+      @media (max-width: 700px)
+        bottom: 1px
+        height: 1px
+
+    &:hover
+      transform: scale(1.1)
+      transition: 0.85s
+
+      &::before
+        width: 100%
+        left: 0
+        transition: 0.85s
+
+.menu__content
+  & .footer__copyright
+    position: absolute
+    bottom: 75px
+  & .side-menu__link
+    animation: none
+    font-size: 18px !important
+  & .side-menu__list
+    gap: 40px !important

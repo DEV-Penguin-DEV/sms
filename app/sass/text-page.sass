@@ -1,3 +1,8 @@
+.text-page-body
+    & .footer
+        @media(max-width: 1200px)
+            padding: 10px 0 30px
+
 .text-page__header
     background: none
 
@@ -63,9 +68,9 @@
         &--side
             font-size: 1.1vw
     @media(max-width: 500px)
-        font-size: 1.95vw
+        font-size: 14px
         &--side
-            font-size: 1.7vw
+            font-size: 13px
 
 .text-page__title
     font-family: 'Kharkiv Tone'
@@ -104,13 +109,13 @@
             margin-bottom: 3.4vw
     @media(max-width: 500px)
         &--h1
-            font-size: 4.8vw
+            font-size: 24px
         &--h2
-            font-size: 3.25vw
+            font-size: 20px
         &--h3
-            font-size: 2.35vw
+            font-size: 18px
         &--h4
-            font-size: 2.35vw
+            font-size: 18px
 
 .side-article__title
     font-family: 'Neue Machina'
@@ -128,12 +133,14 @@
     @media(max-width: 815px)
         font-size: 1.15vw
     @media(max-width: 500px)
-        font-size: 1.5vw
+        font-size: 16px
 
 .page-way
     display: flex
     gap: 60px
     margin-bottom: 3.2vw
+    @media(max-width: 1200px)
+        gap: 40px
     @media(max-width: 1000px)
         margin-bottom: 4.6vw
 
@@ -149,13 +156,21 @@
     @media(max-width: 815px)
         font-size: 1.15vw
     @media(max-width: 500px)
-        font-size: 1.5vw
+        font-size: 14px
     &::before
-        @include defaul-pseudo-element(6px, 5px)
+        @include defaul-pseudo-element(7px, 6px)
         background: url('../img/arrow_navigation.svg') no-repeat center center
         background-size: contain
         @include centering-height-absolute-element()
-        right: -26px
+        right: -30px
+        @media(max-width: 1200px)
+            right: -24px
+            width: 8px
+            height: 7px
+        @media(max-width: 1200px)
+            right: -24px
+            width: 6px
+            height: 5px
 
     &--active
         opacity: 0.5
@@ -200,6 +215,10 @@
             margin-bottom: 6.8vw
         &--lists
             margin-bottom: 9vw
+    @media(max-width: 500px)
+        display: flex !important
+        gap: 15px
+        flex-direction: column
 
 .text-page__row-title
     font-family: 'Kharkiv Tone'
@@ -214,13 +233,15 @@
     @media(max-width: 815px)
         font-size: 1.8vw
     @media(max-width: 500px)
-        font-size: 2.35vw
+        font-size: 16px
 
 .text-page__list
     display: flex
     flex-direction: column
     gap: 1vw
     padding-left: 1.8vw
+    @media(max-width: 500px)
+        padding-left: 20px
 
 .text-page__number-list
     margin: 0
@@ -243,7 +264,8 @@
             @media(max-width: 815px)
                 font-size: 1.45vw
             @media(max-width: 500px)
-                font-size: 1.9vw
+                font-size: 13px
+                left: -18px
 
 .text-page__unnumber-list
     width: 100%
@@ -256,6 +278,10 @@
             background: #00E0FF
             border-radius: 50%
             top: 20%
+            @media(max-width: 500px)
+                left: -14px
+                width: 0.9vw
+                height: 0.9vw
 .side-article
     grid-area: side-article
 
@@ -271,4 +297,4 @@
     @media(max-width: 815px)
         font-size: 1.1vw
     @media(max-width: 500px)
-        font-size: 1.45vw
+        font-size: 12px

@@ -51,10 +51,6 @@ $(document).ready(function () {
             list.select2("open");
         });
 
-    setTimeout(() => {
-        $('#preloader ').addClass('hide');
-    }, 2000)
-
     let openSearch = false;
 
     $('.intro__filter').each(function (i, e) {
