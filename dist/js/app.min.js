@@ -144,7 +144,7 @@ $(document).ready(function () {
         $('.needAnim').each(function (e) {
             let top = $(this).offset().top + $(this).scrollTop();
 
-            if (current > top) {
+            if (current > top + (document.documentElement.clientHeight * 0.2)) {
                 $(this).addClass('animated');
 
                 activeSection = $(this).parents('section').index() + 1;
